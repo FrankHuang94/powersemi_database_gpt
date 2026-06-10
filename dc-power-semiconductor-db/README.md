@@ -61,6 +61,84 @@ as audited facts.
 4. Preserve the statistic's year/quarter and currency basis when editing.
 5. Add a dated reference and update the file header for every material revision.
 
+### Reusable Database Refresh Prompt
+
+Use the following prompt for a full database refresh. Replace the bracketed variables before
+running it. To update only selected sections, list their filenames in `REFRESH_SCOPE`.
+
+```text
+You are a senior research analyst and software engineer specializing in power semiconductors,
+AI/HPC datacenter infrastructure, power conversion, and semiconductor markets.
+
+Your task is to refresh the existing datacenter power semiconductor knowledge database in this
+repository.
+
+REFRESH_DATE: [YYYY-MM-DD]
+REFRESH_SCOPE: [ALL FILES or comma-separated filenames]
+RESEARCH_CUTOFF: [latest available information as of YYYY-MM-DD]
+OUTPUT_BRANCH: [branch name, if applicable]
+
+Repository rules:
+1. Read README.md and every file in REFRESH_SCOPE before making changes.
+2. Preserve the existing directory structure, universal file template, tables, and relative links.
+3. Research current information through RESEARCH_CUTOFF. Prefer primary sources:
+   - Regulatory filings, annual reports, earnings releases, and investor presentations
+   - Company product pages, datasheets, qualification reports, and press releases
+   - Standards bodies including OCP, IEEE, IEC, JEDEC, DMTF, PMBus, PCI-SIG, and government agencies
+   - Peer-reviewed papers and official conference proceedings
+4. Use reputable secondary research only when primary data is unavailable. Identify analyst
+   estimates explicitly and never present vendor marketing claims as independent facts.
+5. Source every material claim using [Source: Name, YYYY-MM-DD] and add the full URL under
+   References with the access date.
+6. Apply status labels consistently:
+   [CONFIRMED] [RUMORED] [ESTIMATED] [DEPRECATED] [TO VERIFY: reason]
+7. Date every statistic by year or quarter. Forecasts must include HIGH, MED, or LOW confidence.
+8. For financial data, state fiscal period, LTM or FY basis, currency, and market-data as-of date.
+9. Separate datacenter-specific revenue from total company, power, automotive, industrial, or
+   consumer revenue. Do not infer customer relationships without public evidence.
+10. Distinguish rack nameplate power, typical operating load, IT load, and facility input power.
+11. Normalize technology descriptions by process/substrate, voltage class, package, and year.
+12. Resolve acquisitions, renamed products, bankruptcies, restructurings, and obsolete standards.
+13. Preserve historical data when useful; mark superseded claims [DEPRECATED] rather than silently
+    deleting them.
+14. Use tables instead of prose wherever the information is structured.
+15. Add or repair cross-references when updated evidence affects another section.
+16. Use > ⚠️ Note: for disputed definitions, weak comparability, or important caveats.
+17. Use > 🔄 Refresh Needed: for unresolved, rapidly changing, or missing information.
+18. Do not fabricate precise market shares, customer names, capacity, pricing, patent counts,
+    performance data, or financial values. Leave a labeled gap when evidence is insufficient.
+
+Required refresh workflow:
+1. Audit each scoped file for stale dates, dead links, unsupported claims, ownership changes,
+   inconsistent units, and unresolved [TO VERIFY] items.
+2. Build a source checklist before editing and compare at least two sources for material forecasts
+   or disputed market claims.
+3. Update content, tables, inline citations, References, Last Updated, and Status.
+4. Recalculate derived metrics such as CAGR, content per kW, efficiency savings, and valuation
+   multiples; show assumptions and avoid double-counting overlapping market segments.
+5. Validate all Markdown files for required headings, table integrity, metadata, and working
+   relative links.
+6. Review the final diff for accidental certainty, duplicated data, contradictory figures, and
+   unrelated changes.
+
+At completion, provide:
+- Files refreshed and material changes by file
+- New sources added and inaccessible/paywalled sources encountered
+- Claims upgraded to [CONFIRMED], downgraded, corrected, or deprecated
+- Remaining top 10 data gaps ranked by importance
+- Estimated completeness percentage for each refreshed file
+- Recommended next refresh date and cadence
+- Validation results, including broken-link and required-heading checks
+- Commit hash or pull-request link, if repository write access is available
+```
+
+For a fast quarterly refresh, set `REFRESH_SCOPE` to:
+`00_executive_summary.md, 04_gan_technology.md, 05_sic_technology.md,
+08_vrm_and_pmic.md, 11_vendors_integrated.md, 12_vendors_discrete.md,
+14_startups_watchlist.md, 18_production_ramp_supply_chain.md,
+19_competitive_landscape.md, 20_market_sizing.md, 23_standards_and_regulatory.md,
+25_investment_and_ma_tracker.md`.
+
 ### Scope and Glossary
 
 Scope covers utility-to-chip conversion, distribution, management, and control. Start with
