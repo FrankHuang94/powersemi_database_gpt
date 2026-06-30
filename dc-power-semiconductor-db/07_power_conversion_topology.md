@@ -1,5 +1,5 @@
 # Power Conversion Topology
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** topology, PFC, LLC, DAB, multiphase, switched-capacitor
 
@@ -18,6 +18,30 @@ Bidirectional CLLC and DAB stages support BBUs, UPS, and future HVDC architectur
 - [CONFIRMED] Multiphase operation shares current and cancels ripple at the output.
 - [CONFIRMED] DAB provides isolated bidirectional power using two active bridges.
 - [ESTIMATED] Hybrid switched-capacitor/inductor designs gain value as conversion ratios rise.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  TOP["Topology selection"] --> BUCK["Buck / multiphase buck"]
+  TOP --> LLC["LLC resonant"]
+  TOP --> PSFB["Phase-shift full bridge"]
+  TOP --> TLLC["Totem-pole PFC"]
+  TOP --> CAP["Switched-capacitor / hybrid"]
+  BUCK --> POL["Low-voltage POL"]
+  LLC --> IBC["48 V intermediate bus"]
+  TLLC --> FRONT["High-efficiency AC-DC front end"]
+  CAP --> DENSE["High-density 48 V conversion"]
+```
+
+```mermaid
+flowchart LR
+  VIN["Input voltage"] --> DUTY["Duty cycle and stress"]
+  DUTY --> MAG["Magnetics size"]
+  MAG --> FREQ["Switching frequency"]
+  FREQ --> LOSS["Switching and conduction losses"]
+  LOSS --> HEAT["Thermal design"]
+  HEAT --> EFF["System efficiency"]
+```
 
 ## Detailed Content
 ### Topology Matrix

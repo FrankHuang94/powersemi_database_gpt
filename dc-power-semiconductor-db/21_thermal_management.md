@@ -1,5 +1,5 @@
 # Thermal Management
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** thermal, cooling, TIM, liquid-cooling, simulation
 
@@ -18,6 +18,26 @@ device temperature because die thickness, package, TIM, contact pressure, and co
 - [CONFIRMED] Many commercial Si/GaN devices are rated near 150 C; SiC often 175 C or higher.
 - [ESTIMATED] Air cooling becomes difficult for concentrated ~30 W+ package dissipation without large airflow/heatsinks.
 - [CONFIRMED] Double-sided and direct-substrate cooling reduce package thermal bottlenecks.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  DIE["Semiconductor junction"] --> CASE["Package / case"]
+  CASE --> TIM["Thermal interface material"]
+  TIM --> SINK["Heatsink or cold plate"]
+  SINK --> LOOP["Air or liquid loop"]
+  LOOP --> FAC["Facility heat rejection"]
+```
+
+```mermaid
+flowchart TB
+  THERM["Thermal design levers"] --> LOSS["Reduce conversion loss"]
+  THERM --> PKG["Lower package thermal resistance"]
+  THERM --> TIM["Better TIM and contact pressure"]
+  THERM --> COOL["Liquid cooling or airflow design"]
+  THERM --> PLACE["Place converters near load without hot spots"]
+  THERM --> TELE["Telemetry and derating policy"]
+```
 
 ## Detailed Content
 ### Thermal Chain

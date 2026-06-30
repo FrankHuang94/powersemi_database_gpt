@@ -1,5 +1,5 @@
 # Production Ramp and Supply Chain
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** supply-chain, substrates, foundry, packaging, capacity
 
@@ -18,6 +18,27 @@ and yields are normalized.
 - [CONFIRMED] GaN power production spans 150, 200, and announced 300 mm lines.
 - [CORRECTION] SK Siltron is an SK Group company.
 - [CONFIRMED] TSMC, GlobalFoundries, Tower, X-Fab, and SSMC serve analog/power IC ecosystems.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  MAT["Substrate / wafer / foundry"] --> FAB["Device fabrication"]
+  FAB --> PROBE["Wafer probe"]
+  PROBE --> PKG["Packaging and module assembly"]
+  PKG --> TEST["Burn-in, electrical, thermal, reliability test"]
+  TEST --> QUAL["Customer qualification"]
+  QUAL --> HVM["High-volume manufacturing"]
+```
+
+```mermaid
+flowchart TB
+  BOT["Ramp bottlenecks"] --> SIC["SiC substrates and epi defects"]
+  BOT --> GAN["GaN epi and qualified foundry capacity"]
+  BOT --> PKG["Low-inductance / high-voltage packaging"]
+  BOT --> MAG["Magnetics and thermal materials"]
+  BOT --> TEST["High-power test time"]
+  BOT --> QUAL["Datacenter qualification cycles"]
+```
 
 ## Detailed Content
 ### End-to-End Map

@@ -1,5 +1,5 @@
 # Datacenter Power Semiconductor Database
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** index, datacenter, power-semiconductors, AI-infrastructure
 
@@ -26,32 +26,65 @@ as audited facts.
 
 | Section | File | Status | Last Updated |
 |---|---|---:|---:|
-| Executive summary | [00](00_executive_summary.md) | Draft | 2026-06-10 |
-| Technology overview and glossary | [01](01_technology_overview.md) | Draft | 2026-06-10 |
-| Architecture roadmap | [02](02_power_architecture_roadmap.md) | Draft | 2026-06-10 |
-| Wide-bandgap overview | [03](03_wide_bandgap_semiconductors.md) | Draft | 2026-06-10 |
-| GaN technology | [04](04_gan_technology.md) | Draft | 2026-06-10 |
-| SiC technology | [05](05_sic_technology.md) | Draft | 2026-06-10 |
-| Silicon devices | [06](06_silicon_power_devices.md) | Draft | 2026-06-10 |
-| Conversion topology | [07](07_power_conversion_topology.md) | Draft | 2026-06-10 |
-| VRM and PMIC | [08](08_vrm_and_pmic.md) | Draft | 2026-06-10 |
-| Digital power | [09](09_digital_power_management.md) | Draft | 2026-06-10 |
-| Distribution architecture | [10](10_power_distribution_architecture.md) | Draft | 2026-06-10 |
-| Integrated vendors | [11](11_vendors_integrated.md) | Draft | 2026-06-10 |
-| Discrete vendors | [12](12_vendors_discrete.md) | Draft | 2026-06-10 |
-| Module/system vendors | [13](13_vendors_modules_and_systems.md) | Draft | 2026-06-10 |
-| Startup watchlist | [14](14_startups_watchlist.md) | Draft | 2026-06-10 |
-| Hyperscaler strategies | [15](15_hyperscaler_power_strategy.md) | Draft | 2026-06-10 |
-| Patents and IP | [16](16_patents_ip_landscape.md) | Draft | 2026-06-10 |
-| Research papers | [17](17_key_research_papers.md) | Draft | 2026-06-10 |
-| Supply chain | [18](18_production_ramp_supply_chain.md) | Draft | 2026-06-10 |
-| Competition | [19](19_competitive_landscape.md) | Draft | 2026-06-10 |
-| Market sizing | [20](20_market_sizing.md) | Draft | 2026-06-10 |
-| Thermal management | [21](21_thermal_management.md) | Draft | 2026-06-10 |
-| Power integrity | [22](22_power_integrity_and_signal.md) | Draft | 2026-06-10 |
-| Standards | [23](23_standards_and_regulatory.md) | Draft | 2026-06-10 |
-| Sustainability | [24](24_sustainability_and_efficiency.md) | Draft | 2026-06-10 |
-| Investment/M&A | [25](25_investment_and_ma_tracker.md) | Draft | 2026-06-10 |
+| Executive summary | [00](00_executive_summary.md) | Draft | 2026-06-30 |
+| Technology overview and glossary | [01](01_technology_overview.md) | Draft | 2026-06-30 |
+| Architecture roadmap | [02](02_power_architecture_roadmap.md) | Draft | 2026-06-30 |
+| Wide-bandgap overview | [03](03_wide_bandgap_semiconductors.md) | Draft | 2026-06-30 |
+| GaN technology | [04](04_gan_technology.md) | Draft | 2026-06-30 |
+| SiC technology | [05](05_sic_technology.md) | Draft | 2026-06-30 |
+| Silicon devices | [06](06_silicon_power_devices.md) | Draft | 2026-06-30 |
+| Conversion topology | [07](07_power_conversion_topology.md) | Draft | 2026-06-30 |
+| VRM and PMIC | [08](08_vrm_and_pmic.md) | Draft | 2026-06-30 |
+| Digital power | [09](09_digital_power_management.md) | Draft | 2026-06-30 |
+| Distribution architecture | [10](10_power_distribution_architecture.md) | Draft | 2026-06-30 |
+| Integrated vendors | [11](11_vendors_integrated.md) | Draft | 2026-06-30 |
+| Discrete vendors | [12](12_vendors_discrete.md) | Draft | 2026-06-30 |
+| Module/system vendors | [13](13_vendors_modules_and_systems.md) | Draft | 2026-06-30 |
+| Startup watchlist | [14](14_startups_watchlist.md) | Draft | 2026-06-30 |
+| Hyperscaler strategies | [15](15_hyperscaler_power_strategy.md) | Draft | 2026-06-30 |
+| Patents and IP | [16](16_patents_ip_landscape.md) | Draft | 2026-06-30 |
+| Research papers | [17](17_key_research_papers.md) | Draft | 2026-06-30 |
+| Supply chain | [18](18_production_ramp_supply_chain.md) | Draft | 2026-06-30 |
+| Competition | [19](19_competitive_landscape.md) | Draft | 2026-06-30 |
+| Market sizing | [20](20_market_sizing.md) | Draft | 2026-06-30 |
+| Thermal management | [21](21_thermal_management.md) | Draft | 2026-06-30 |
+| Power integrity | [22](22_power_integrity_and_signal.md) | Draft | 2026-06-30 |
+| Standards | [23](23_standards_and_regulatory.md) | Draft | 2026-06-30 |
+| Sustainability | [24](24_sustainability_and_efficiency.md) | Draft | 2026-06-30 |
+| Investment/M&A | [25](25_investment_and_ma_tracker.md) | Draft | 2026-06-30 |
+
+### Visual Navigation
+Every numbered section now includes a `Visual Guide` with GitHub-rendered Mermaid diagrams. The diagrams are self-authored summaries of the conversion chain, roadmap, device choices, vendor ecosystem, and investment logic, so they can be reviewed and versioned as text.
+
+| Visual Theme | Sections |
+|---|---|
+| System overview and roadmap | [00](00_executive_summary.md), [01](01_technology_overview.md), [02](02_power_architecture_roadmap.md) |
+| Device technologies | [03](03_wide_bandgap_semiconductors.md), [04](04_gan_technology.md), [05](05_sic_technology.md), [06](06_silicon_power_devices.md) |
+| Conversion, control, and distribution | [07](07_power_conversion_topology.md), [08](08_vrm_and_pmic.md), [09](09_digital_power_management.md), [10](10_power_distribution_architecture.md), [22](22_power_integrity_and_signal.md) |
+| Vendor and buyer ecosystem | [11](11_vendors_integrated.md), [12](12_vendors_discrete.md), [13](13_vendors_modules_and_systems.md), [14](14_startups_watchlist.md), [15](15_hyperscaler_power_strategy.md), [19](19_competitive_landscape.md) |
+| Evidence, operations, and compliance | [16](16_patents_ip_landscape.md), [17](17_key_research_papers.md), [18](18_production_ramp_supply_chain.md), [21](21_thermal_management.md), [23](23_standards_and_regulatory.md), [24](24_sustainability_and_efficiency.md) |
+| Market and investment model | [20](20_market_sizing.md), [25](25_investment_and_ma_tracker.md) |
+
+### Official Visual Source Register
+Vendor diagrams, product photos, reference designs, investor-presentation figures, and architecture graphics should be linked to official pages rather than copied into the repository unless reuse rights are clear.
+
+| Organization | Official Visual / Content Source | Best-Fit Sections |
+|---|---|---|
+| Open Compute Project | ORv3, HPR, power shelf, rack busbar, and hardware specifications: https://www.opencompute.org/wiki/Open_Rack/SpecsAndDesigns | [02](02_power_architecture_roadmap.md), [10](10_power_distribution_architecture.md), [15](15_hyperscaler_power_strategy.md), [23](23_standards_and_regulatory.md) |
+| NVIDIA | GB200 NVL72 and AI rack system visuals: https://www.nvidia.com/en-us/data-center/gb200-nvl72/ | [02](02_power_architecture_roadmap.md), [08](08_vrm_and_pmic.md), [15](15_hyperscaler_power_strategy.md), [20](20_market_sizing.md) |
+| Vicor | 48 V AI and factorized power architecture diagrams: https://www.vicorpower.com/ | [02](02_power_architecture_roadmap.md), [08](08_vrm_and_pmic.md), [13](13_vendors_modules_and_systems.md) |
+| Delta Electronics | datacenter power shelf, rack, and infrastructure visuals: https://www.deltaww.com/en-US/solutions/Data-Center | [10](10_power_distribution_architecture.md), [13](13_vendors_modules_and_systems.md), [21](21_thermal_management.md) |
+| Vertiv | high-density AI power and cooling diagrams: https://www.vertiv.com/en-us/solutions/high-density-ai/ | [10](10_power_distribution_architecture.md), [13](13_vendors_modules_and_systems.md), [21](21_thermal_management.md) |
+| Infineon | datacenter power, GaN, MOSFET, and controller visuals: https://www.infineon.com/cms/en/applications/computing/data-center-and-servers/ | [04](04_gan_technology.md), [08](08_vrm_and_pmic.md), [11](11_vendors_integrated.md) |
+| Texas Instruments | datacenter/server power and multiphase control visuals: https://www.ti.com/applications/enterprise-systems/data-center-enterprise-computing/overview.html | [08](08_vrm_and_pmic.md), [09](09_digital_power_management.md), [11](11_vendors_integrated.md) |
+| Analog Devices | data center power and digital power management visuals: https://www.analog.com/en/solutions/data-center.html | [08](08_vrm_and_pmic.md), [09](09_digital_power_management.md), [11](11_vendors_integrated.md) |
+| Renesas | data center power and multiphase/GaN visuals: https://www.renesas.com/en/applications/data-center-computing | [04](04_gan_technology.md), [08](08_vrm_and_pmic.md), [11](11_vendors_integrated.md) |
+| Monolithic Power Systems | datacenter power module and VRM visuals: https://www.monolithicpower.com/en/applications/data-center.html | [08](08_vrm_and_pmic.md), [11](11_vendors_integrated.md), [13](13_vendors_modules_and_systems.md) |
+| Navitas | GaNFast, GaNSafe, GeneSiC, and AI power visuals: https://navitassemi.com/ | [04](04_gan_technology.md), [12](12_vendors_discrete.md), [25](25_investment_and_ma_tracker.md) |
+| Wolfspeed | SiC substrate, wafer, device, and manufacturing visuals: https://www.wolfspeed.com/ | [05](05_sic_technology.md), [12](12_vendors_discrete.md), [18](18_production_ramp_supply_chain.md) |
+| EPC | eGaN device, package, and application visuals: https://epc-co.com/epc/products/gan-fets-and-ics | [04](04_gan_technology.md), [12](12_vendors_discrete.md), [16](16_patents_ip_landscape.md) |
+| onsemi | EliteSiC and cloud power application visuals: https://www.onsemi.com/applications/industrial-cloud-power/cloud-power | [05](05_sic_technology.md), [11](11_vendors_integrated.md), [18](18_production_ramp_supply_chain.md) |
+| ROHM | SiC and power device application visuals: https://www.rohm.com/products/sic-power-devices | [05](05_sic_technology.md), [11](11_vendors_integrated.md), [12](12_vendors_discrete.md) |
 
 ### How to Use This Database
 

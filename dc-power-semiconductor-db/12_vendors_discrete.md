@@ -1,5 +1,5 @@
 # Discrete-Focused Power Semiconductor Vendors
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** vendors, Wolfspeed, Navitas, EPC, AOS, China
 
@@ -20,6 +20,35 @@ lineages, not independent public competitors.
 - [CONFIRMED, 2024] Transphorm was acquired by Renesas.
 - [CONFIRMED, 2021] Qorvo acquired UnitedSiC.
 - [ESTIMATED] Chinese SiC suppliers are scaling faster than their datacenter qualification evidence.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  DISC["Discrete-focused vendor"] --> DEVICE["Device performance"]
+  DISC --> PKG["Package and parasitics"]
+  DISC --> APP["Application reference design"]
+  DISC --> SUPPLY["Wafer, epi, and foundry access"]
+  DISC --> QUAL["Customer qualification"]
+  QUAL --> REV["Revenue conversion"]
+```
+
+```mermaid
+flowchart LR
+  WOLF["Wolfspeed"] --> SIC["SiC materials/devices"]
+  NAV["Navitas"] --> GAN["GaN ICs plus GeneSiC"]
+  EPC["EPC"] --> EGAN["eGaN FETs/ICs"]
+  AOS["AOS"] --> SI["Silicon MOSFETs"]
+  CHINA["China ecosystem"] --> DOM["Domestic Si, SiC, GaN scaling"]
+```
+
+### Official Visual References
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| Wolfspeed | SiC wafer, device, package, and application visuals | https://www.wolfspeed.com/ |
+| Navitas | GaNFast, GaNSafe, GeneSiC, and AI power architecture graphics | https://navitassemi.com/ |
+| EPC | eGaN package and application diagrams | https://epc-co.com/epc/products/gan-fets-and-ics |
+| Alpha and Omega Semiconductor | MOSFET and power-stage product visuals | https://www.aosmd.com/ |
+| Littelfuse / IXYS | discrete and module power device visuals | https://www.littelfuse.com/products/power-semiconductors.aspx |
 
 ## Detailed Content
 ### Active Vendors

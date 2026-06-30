@@ -1,5 +1,5 @@
 # Startups Watchlist
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** startups, venture, GaN, SiC, magnetics, M&A
 
@@ -18,6 +18,25 @@ Unverified values are omitted and marked for primary-source confirmation.
 - [CONFIRMED] Exagan was acquired by ST in 2020; UnitedSiC by Qorvo in 2021.
 - [CONFIRMED] Enpirion assets moved from Intel to MPS in 2020.
 - [CORRECTION] Heliogen, Nextracker, and Movella are not direct DC power-semiconductor startups.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  START["Startup diligence"] --> CLAIM["Technology claim"]
+  CLAIM --> DEMO["Prototype or reference design"]
+  DEMO --> QUAL["Customer qualification"]
+  QUAL --> SUPPLY["Manufacturing and supply path"]
+  SUPPLY --> ECON["Cost, efficiency, and density proof"]
+  ECON --> OUTCOME["Scale, acquisition, pivot, or stall"]
+```
+
+```mermaid
+flowchart LR
+  GAN["GaN startups"] --> POWER["Faster switching and integration"]
+  SIC["SiC startups"] --> MATERIAL["Substrate/device supply"]
+  CTRL["Digital power startups"] --> SW["Telemetry, control, optimization"]
+  THERM["Thermal startups"] --> COOL["High-density rack enablement"]
+```
 
 ## Detailed Content
 ### Active Watchlist

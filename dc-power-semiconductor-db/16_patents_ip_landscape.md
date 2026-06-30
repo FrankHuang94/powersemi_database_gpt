@@ -1,5 +1,5 @@
 # Patents and IP Landscape
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** patents, IP, FTO, GaN, SiC, topology
 
@@ -19,6 +19,26 @@ opinion.
 - [CONFIRMED] EPC, Infineon, TI, Navitas, and Renesas/Transphorm hold overlapping GaN portfolios.
 - [ESTIMATED] Highest FTO density is around e-mode structures, trench SiC, integrated drive/protection, and soft-switching control.
 - [TO VERIFY] Marketing patent counts must be converted to active simple families.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  Q["Patent query"] --> FAM["Patent families"]
+  FAM --> OWNER["Normalize owner and acquisitions"]
+  OWNER --> THEME["Cluster by device, package, topology, control"]
+  THEME --> SCORE["Score recency, citations, and claim scope"]
+  SCORE --> RISK["FTO and licensing risk"]
+```
+
+```mermaid
+flowchart TB
+  IP["Power semiconductor IP map"] --> MAT["GaN/SiC materials and epi"]
+  IP --> DEV["Device structures"]
+  IP --> PKG["Packaging and thermal paths"]
+  IP --> TOP["Converter topologies"]
+  IP --> CTRL["Digital control and telemetry"]
+  IP --> SYS["Rack-level power architecture"]
+```
 
 ## Detailed Content
 ### Holder Map

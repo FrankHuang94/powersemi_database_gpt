@@ -1,5 +1,5 @@
 # Power Architecture Roadmap
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** architecture, 12V, 48V, HVDC, roadmap
 
@@ -19,6 +19,36 @@ thesis rather than a broadly ratified deployment standard as of 2026.
 - [CONFIRMED] Raising distribution from 12 V to 48 V cuts current by 4x at equal power and resistive loss by up to 16x at equal resistance.
 - [ESTIMATED, LOW confidence, 2027+] 800 V-class rack distribution depends on safety and connector standards.
 - [CONFIRMED] Sub-1 V processor rails force the final converter physically close to the package.
+
+## Visual Guide
+```mermaid
+timeline
+  title Datacenter Power Architecture Roadmap
+  2014 : 12 V server distribution : commodity air-cooled racks
+  2016-2020 : 12 V and 48 V coexist : accelerator-driven current growth
+  2021-2026 : 48 V ORv3 mainstream : AI rack power and busbar adoption
+  2024-2028 : 380/400 V DC pilots : fewer conversion stages
+  2027+ : 800 V-class concepts : extreme rack density and safety work
+```
+
+```mermaid
+flowchart LR
+  A["12 V rack"] --> B["48 V rack"]
+  B --> C["400 V HVDC rack/facility"]
+  C --> D["800 V-class concept"]
+  B --> E["48 V direct-to-load or intermediate bus"]
+  C --> F["400 V to 48 V modules"]
+  D --> G["Higher-voltage protection and connectors"]
+```
+
+### Official Roadmap Visual References
+| Organization | Visual Material to Review | Official Source |
+|---|---|---|
+| Open Compute Project | ORv3, power shelf, busbar, and HPR architecture diagrams | https://www.opencompute.org/wiki/Open_Rack/SpecsAndDesigns |
+| NVIDIA | GB200 NVL72 and AI rack system visuals | https://www.nvidia.com/en-us/data-center/gb200-nvl72/ |
+| Vicor | 48 V power delivery and factorized power architecture diagrams | https://www.vicorpower.com/ |
+| Delta Electronics | datacenter power shelf and rack power system visuals | https://www.deltaww.com/en-US/solutions/Data-Center |
+| Vertiv | high-density rack and power infrastructure diagrams | https://www.vertiv.com/en-us/solutions/high-density-ai/ |
 
 ## Detailed Content
 ### Evolution Timeline

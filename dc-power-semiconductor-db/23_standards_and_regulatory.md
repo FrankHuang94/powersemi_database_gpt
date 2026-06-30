@@ -1,5 +1,5 @@
 # Standards and Regulatory
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** standards, OCP, PMBus, IEC, IEEE, regulation
 
@@ -18,6 +18,26 @@ ATX/PCIe connector rules do not universally govern rack-scale accelerators, and 
 - [CONFIRMED] IEEE 519 addresses harmonic control at the point of common coupling.
 - [CONFIRMED] IEC/UL 62368-1 replaces legacy 60950-1 for many ICT products.
 - [CONFIRMED] JEDEC JEP173 addresses GaN dynamic on-resistance measurement, not full product qualification.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  NEED["New rack power need"] --> STD["Standards body or consortium"]
+  STD --> SPEC["Specification: voltage, safety, connector, management"]
+  SPEC --> CERT["Compliance and certification"]
+  CERT --> QUAL["Customer qualification"]
+  QUAL --> DEPLOY["Deployment and field feedback"]
+  DEPLOY --> REV["Spec revision"]
+```
+
+```mermaid
+flowchart LR
+  OCP["OCP"] --> ORV3["ORv3 / HPR rack power"]
+  PMBUS["PMBus"] --> TELE["Digital power telemetry"]
+  JEDEC["JEDEC"] --> QUAL["Semiconductor reliability"]
+  IEC["IEC / UL"] --> SAFETY["Electrical safety"]
+  GOV["Energy and export regulators"] --> POLICY["Efficiency, sourcing, and compliance"]
+```
 
 ## Detailed Content
 ### Standards Tracker

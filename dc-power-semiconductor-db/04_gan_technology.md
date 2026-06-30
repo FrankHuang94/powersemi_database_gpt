@@ -1,5 +1,5 @@
 # GaN Technology
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** GaN, HEMT, substrates, PFC, reliability
 
@@ -19,6 +19,33 @@ disciplined design. Datacenter revenue is concentrated in AC/DC PFC and high-den
 - [CONFIRMED] Totem-pole PFC prototypes/products can exceed 99% peak efficiency under specified conditions.
 - [CORRECTION] Navitas GeneSiC is a SiC product brand, not a fully integrated GaN driver/controller.
 - [CONFIRMED, 2023-2024] Infineon acquired GaN Systems; Renesas acquired Transphorm.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  SUB["Silicon or SiC substrate"] --> EPI["GaN epi stack"]
+  EPI --> HEMT["Lateral HEMT channel"]
+  HEMT --> GATE["Gate / driver integration"]
+  GATE --> PKG["Low-inductance package"]
+  PKG --> APP["48 V DC-DC, PFC, adapters, AI power"]
+```
+
+```mermaid
+flowchart TB
+  LADDER["GaN integration ladder"] --> DISC["Discrete FET"]
+  DISC --> DRIVER["FET plus driver"]
+  DRIVER --> IC["GaN power IC"]
+  IC --> MODULE["Power module or system-in-package"]
+  MODULE --> BOARD["Reference design / qualified power stage"]
+```
+
+### Official Visual References
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| Navitas | GaNFast, GaNSafe, and AI datacenter power architecture visuals | https://navitassemi.com/ |
+| Infineon | GaN Systems / CoolGaN product and application diagrams | https://www.infineon.com/cms/en/product/power/gallium-nitride-gan/ |
+| EPC | eGaN device, package, and application diagrams | https://epc-co.com/epc/products/gan-fets-and-ics |
+| Renesas | Transphorm GaN product-line and application visuals | https://www.renesas.com/en/products/power-power-management/gan-fets |
 
 ## Detailed Content
 ### Device Structures

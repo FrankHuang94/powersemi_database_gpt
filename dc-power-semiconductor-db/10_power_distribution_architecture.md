@@ -1,5 +1,5 @@
 # Power Distribution Architecture
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** ORv3, HVDC, power-shelf, busbar, BBU
 
@@ -18,6 +18,37 @@ architecture is optimal for every brownfield and greenfield datacenter.
 - [CONFIRMED] Busbars reduce harness resistance and improve current distribution at high power.
 - [ESTIMATED] 400 V DC architectures can remove one AC/DC stage in suitable facilities.
 - [RUMORED/ROADMAP] 800 V rack distribution is not yet a broadly adopted standard as of 2026.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  UTILITY["Utility / generator"] --> UPS["UPS or BBU"]
+  UPS --> PDU["PDU / rectifier"]
+  PDU --> SHELF["Rack power shelf"]
+  SHELF --> BUSBAR["Rack busbar"]
+  BUSBAR --> NODE["Server tray / accelerator tray"]
+  NODE --> VRM["Board-level conversion"]
+```
+
+```mermaid
+flowchart TB
+  ARCH["Distribution architecture"] --> V12["12 V legacy"]
+  ARCH --> V48["48 V ORv3"]
+  ARCH --> HV["380/400 V HVDC"]
+  ARCH --> BBU["Rack BBU"]
+  V48 --> BENEFIT["Lower current and copper loss"]
+  HV --> RISK["Protection, connectors, and service safety"]
+  BBU --> TRADE["Runtime and maintenance tradeoffs"]
+```
+
+### Official Visual References
+| Organization | Visual Material to Review | Official Source |
+|---|---|---|
+| OCP | ORv3 rack busbar, power shelf, and HPR diagrams | https://www.opencompute.org/wiki/Open_Rack/SpecsAndDesigns |
+| Delta Electronics | rack power, power shelf, and datacenter infrastructure visuals | https://www.deltaww.com/en-US/solutions/Data-Center |
+| Vertiv | AI-ready power and cooling architecture diagrams | https://www.vertiv.com/en-us/solutions/high-density-ai/ |
+| Eaton | datacenter power distribution and UPS visuals | https://www.eaton.com/us/en-us/markets/data-centers.html |
+| Schneider Electric | datacenter power architecture and sustainability visuals | https://www.se.com/us/en/work/solutions/for-business/data-centers-and-networks/ |
 
 ## Detailed Content
 ### Power Chain

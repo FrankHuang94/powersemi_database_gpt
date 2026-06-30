@@ -1,5 +1,5 @@
 # Silicon Power Devices
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** silicon, MOSFET, IGBT, diode, DrMOS
 
@@ -18,6 +18,28 @@ thin wafers, copper clip packaging, source-down layouts, and integration.
 - [CONFIRMED] Super-junction MOSFETs remain competitive in 600-700 V server PSUs.
 - [CONFIRMED] IGBTs remain used in high-power, lower-frequency UPS/inverter stages.
 - [ESTIMATED] Silicon remains cost-competitive at 12/48 V below roughly 300-500 kHz, design-dependent.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  SI["Silicon power portfolio"] --> MOS["Low-voltage MOSFETs"]
+  SI --> SJ["Superjunction MOSFETs"]
+  SI --> IGBT["IGBTs"]
+  SI --> BCD["BCD / power ICs"]
+  MOS --> VRM["VRM and POL stages"]
+  SJ --> PFC["AC-DC and PFC"]
+  IGBT --> LEGACY["UPS and industrial legacy"]
+  BCD --> PMIC["PMIC, controllers, drivers"]
+```
+
+```mermaid
+flowchart LR
+  COST["Mature cost and supply"] --> FIT["Best fit"]
+  PERF["Switching frequency and loss"] --> FIT
+  VOLT["Voltage class"] --> FIT
+  QUAL["Reliability history"] --> FIT
+  FIT --> CHOICE["Silicon, GaN, or SiC selection"]
+```
 
 ## Detailed Content
 ### Device Map

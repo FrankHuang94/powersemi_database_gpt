@@ -1,5 +1,5 @@
 # Competitive Landscape
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** competition, Porter, margins, positioning, M&A
 
@@ -18,6 +18,27 @@ suppliers.
 - [CONFIRMED] Vicor competes architecturally with conventional multiphase/intermediate-bus designs.
 - [ESTIMATED] SiC oversupply reduces substrate/device pricing power through the mid-2020s.
 - [CONFIRMED] Recent M&A consolidated GaN and SiC specialists into larger portfolios.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  MAT["Materials and wafers"] --> DEV["Power devices"]
+  DEV --> MODULE["Modules and power stages"]
+  MODULE --> SYSTEM["Power shelves and rack systems"]
+  SYSTEM --> BUYER["Hyperscaler / OEM / ODM"]
+  CTRL["Controllers and firmware"] --> MODULE
+  BUYER --> SPEC["Custom specifications and qualification"]
+  SPEC --> DEV
+```
+
+```mermaid
+flowchart TB
+  MOAT["Competitive moats"] --> IP["Device, package, and topology IP"]
+  MOAT --> QUAL["Long qualification cycles"]
+  MOAT --> SCALE["Wafer and packaging scale"]
+  MOAT --> ECOSYS["Reference designs and software tools"]
+  MOAT --> SUPPLY["Secured substrate, foundry, and module capacity"]
+```
 
 ## Detailed Content
 ### Market Structure

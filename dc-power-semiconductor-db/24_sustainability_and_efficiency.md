@@ -1,5 +1,5 @@
 # Sustainability and Efficiency
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** PUE, efficiency, carbon, energy, WUE
 
@@ -18,6 +18,26 @@ must use the same load profile and system boundary.
 - [CONFIRMED] Best hyperscaler PUE values approach ~1.1 annually at favorable sites.
 - [ESTIMATED] GaN totem-pole PFC can improve stage efficiency by roughly 0.5-1.5 points versus legacy silicon designs.
 - [CONFIRMED] WUE complements PUE by tracking water use.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  GRID["Facility input energy"] --> UPS["UPS / backup losses"]
+  UPS --> SHELF["Power shelf losses"]
+  SHELF --> BUS["Distribution losses"]
+  BUS --> VRM["Board conversion losses"]
+  VRM --> CHIP["Useful compute energy"]
+  CHIP --> HEAT["Heat to remove"]
+```
+
+```mermaid
+flowchart TB
+  ROI["Efficiency ROI"] --> WATT["Watts saved per rack"]
+  WATT --> ENERGY["Annual energy savings"]
+  ENERGY --> COOL["Reduced cooling load"]
+  COOL --> CARBON["Lower carbon intensity"]
+  CARBON --> PAYBACK["Payback and procurement case"]
+```
 
 ## Detailed Content
 ### PUE Interpretation

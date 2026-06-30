@@ -1,5 +1,5 @@
 # Market Sizing
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** TAM, forecast, scenarios, content-per-kW
 
@@ -17,6 +17,25 @@ The baseline below is an analyst framework, not a purchased market-research data
 - [ESTIMATED, HIGH] Content per rack rises faster than rack count as accelerator TDP and conversion stages rise.
 - [ESTIMATED, MED] WBG ASP premiums fall while penetration rises, making revenue impact non-linear.
 - [TO VERIFY] $12k-$15k semiconductor content for a 130 kW rack requires primary-source confirmation.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  GPU["AI accelerator shipments"] --> RACK["Accelerators per rack"]
+  RACK --> KW["Rack kW"]
+  KW --> CONTENT["Power semiconductor content per kW"]
+  CONTENT --> TAM["Datacenter power semiconductor TAM"]
+  TAM --> SENS["Sensitivity: voltage architecture, ASP erosion, attach rate"]
+```
+
+```mermaid
+flowchart LR
+  TAM["Total power semiconductor market"] --> DC["Datacenter power SAM"]
+  DC --> DEV["Discrete and integrated devices"]
+  DC --> MOD["Modules and power stages"]
+  DC --> SYS["Power shelves and rack systems"]
+  DC --> CTRL["Digital power controllers"]
+```
 
 ## Detailed Content
 ### Segment Forecast

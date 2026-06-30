@@ -1,5 +1,5 @@
 # Key Research Papers
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** papers, bibliography, IEEE, APEC, reliability
 
@@ -17,6 +17,28 @@ application evidence but should not replace independent reliability or efficienc
 - [CONFIRMED] SiC gate-oxide/interface reliability remains heavily researched.
 - [CONFIRMED] 48 V-to-POL research includes switched-tank and hybrid converters.
 - [CONFIRMED] HVDC studies must specify architecture boundaries to compare efficiency.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  PAPER["Research paper"] --> TYPE{"Evidence type"}
+  TYPE -->|"Device"| DEV["Check Ron, Qg, breakdown, thermal, reliability"]
+  TYPE -->|"Converter"| CONV["Check topology, efficiency curve, density, EMI"]
+  TYPE -->|"System"| SYS["Check rack power, cooling, controls, deployment assumptions"]
+  DEV --> MAP["Map to database section"]
+  CONV --> MAP
+  SYS --> MAP
+```
+
+```mermaid
+flowchart LR
+  TOPICS["Paper topics"] --> GAN["GaN devices and reliability"]
+  TOPICS --> SIC["SiC materials and devices"]
+  TOPICS --> TOPO["High-density converter topologies"]
+  TOPICS --> THERM["Thermal and packaging"]
+  TOPICS --> PI["Power integrity"]
+  TOPICS --> ARCH["Rack power architecture"]
+```
 
 ## Detailed Content
 ### Curated Starter Set

@@ -1,5 +1,5 @@
 # Digital Power Management
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** PMBus, telemetry, firmware, AVS, security
 
@@ -18,6 +18,26 @@ authentication, rollback, and supply-chain security obligations.
 - [CONFIRMED] AVS/DVFS trade voltage/frequency against performance and energy.
 - [CONFIRMED] Redfish supplies a RESTful management model for server/facility power telemetry.
 - [ESTIMATED] Per-phase telemetry and predictive maintenance become more valuable above 100 kW/rack.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  SENS["Voltage, current, temperature sensors"] --> CTRL["Digital power controller"]
+  CTRL --> PWM["PWM / gate drivers"]
+  PWM --> STAGE["Power stage"]
+  STAGE --> LOAD["Processor or rack load"]
+  CTRL --> PMBUS["PMBus / telemetry"]
+  PMBUS --> BMC["BMC / rack management"]
+```
+
+```mermaid
+flowchart TB
+  LOOP["Control stack"] --> FAST["Fast analog/digital regulation loop"]
+  LOOP --> PROT["Protection: OCP, OVP, OTP, UVLO"]
+  LOOP --> TELE["Telemetry and fault logs"]
+  LOOP --> FW["Firmware and security"]
+  LOOP --> ORCH["Rack-level power orchestration"]
+```
 
 ## Detailed Content
 ### Controller Vendors

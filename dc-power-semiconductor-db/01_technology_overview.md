@@ -1,5 +1,5 @@
 # Technology Overview
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** fundamentals, glossary, device-physics, metrics
 
@@ -18,6 +18,26 @@ defines the vocabulary and metrics used throughout the database.
 - [CONFIRMED] RDS(on) x Qg is a common switching/conduction tradeoff figure of merit, not a full system metric.
 - [CONFIRMED] GaN favors high-frequency and low/medium-voltage switching; SiC favors high voltage and temperature.
 - [CONFIRMED] Silicon retains the broadest maturity, lowest cost, and strongest low-voltage ecosystem.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  AC["Facility AC or DC input"] --> PFC["PFC / rectifier"]
+  PFC --> BUS["Rack bus"]
+  BUS --> DCDC["DC-DC conversion"]
+  DCDC --> POL["Point-of-load regulation"]
+  POL --> DIE["Processor die rails"]
+```
+
+```mermaid
+flowchart TB
+  METRIC["Power semiconductor selection"] --> EFF["Efficiency"]
+  METRIC --> DENS["Power density"]
+  METRIC --> FREQ["Switching frequency"]
+  METRIC --> THERM["Thermal resistance"]
+  METRIC --> COST["Cost and supply"]
+  METRIC --> QUAL["Reliability and qualification"]
+```
 
 ## Detailed Content
 ### Conversion Chain

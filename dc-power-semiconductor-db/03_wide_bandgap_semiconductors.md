@@ -1,5 +1,5 @@
 # Wide-Bandgap Semiconductors
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** WBG, GaN, SiC, reliability, adoption
 
@@ -19,6 +19,25 @@ device-level advantages survive at system level.
 - [ESTIMATED, 2025] Silicon still supplies most datacenter power-semiconductor unit volume.
 - [CONFIRMED] GaN dynamic RDS(on) and SiC gate-oxide stability require technology-specific qualification.
 - [ESTIMATED, LOW confidence] Ga2O3 and diamond are unlikely to affect material DC revenue before 2030.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  WBG["Wide-bandgap choice"] --> GAN["GaN"]
+  WBG --> SIC["SiC"]
+  WBG --> SI["Advanced silicon"]
+  GAN --> G1["Fast switching, high frequency, compact magnetics"]
+  SIC --> S1["Higher voltage, temperature, and ruggedness"]
+  SI --> SI1["Low cost, mature supply, strong low-voltage portfolio"]
+```
+
+```mermaid
+flowchart LR
+  LOW["Low voltage POL"] --> SI["Silicon MOSFET / DrMOS"]
+  MID["48 V conversion"] --> GAN["GaN or advanced silicon"]
+  HIGH["400 V / 800 V conversion"] --> SIC["SiC, GaN, or superjunction Si"]
+  GRID["AC front end"] --> SIC
+```
 
 ## Detailed Content
 ### Device Matrix

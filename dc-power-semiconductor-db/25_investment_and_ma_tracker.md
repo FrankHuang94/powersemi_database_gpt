@@ -1,5 +1,5 @@
 # Investment and M&A Tracker
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** investment, valuation, M&A, catalysts, financials
 
@@ -19,6 +19,26 @@ evidence.
 - [ESTIMATED] Content per rack is a stronger AI-power driver than server-unit growth alone.
 - [ESTIMATED] Hyperscaler custom controllers threaten some merchant IC content but can expand qualified power-stage demand.
 - [CONFIRMED] Market cap, EV, short interest, and consensus require a same-day market-data refresh.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  TECH["Architecture or device inflection"] --> REV["Revenue growth"]
+  REV --> GM["Gross margin and utilization"]
+  GM --> FCF["Free cash flow"]
+  FCF --> VAL["Valuation"]
+  RISK["Customer concentration, capex, pricing, policy"] --> VAL
+  VAL --> CATALYST["Earnings, product launches, standards, M&A"]
+```
+
+```mermaid
+flowchart TB
+  MA["M&A rationale"] --> IP["Acquire GaN, SiC, control, or package IP"]
+  MA --> CAP["Secure capacity or substrate supply"]
+  MA --> CUST["Acquire qualified customer sockets"]
+  MA --> STACK["Build vertical device-to-system stack"]
+  MA --> GEO["Reduce geographic or supply-chain risk"]
+```
 
 ## Detailed Content
 > 🔄 Refresh Needed: High Priority. Populate market data only with an explicit as-of timestamp,

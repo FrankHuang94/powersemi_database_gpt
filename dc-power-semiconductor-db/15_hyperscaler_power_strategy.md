@@ -1,5 +1,5 @@
 # Hyperscaler Power Strategy
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** hyperscalers, NVIDIA, Google, Meta, Microsoft, AWS
 
@@ -19,6 +19,36 @@ shelves, and facility equipment from merchant suppliers.
 - [PARTIALLY CONFIRMED] Microsoft publishes custom Maia infrastructure but detailed power silicon is limited.
 - [RUMORED] AWS custom power-management silicon and supplier attribution lack sufficient public evidence.
 - [CONFIRMED] GB200 NVL72 integrates 72 Blackwell GPUs in a liquid-cooled rack-scale system.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  HYPER["Hyperscaler power architecture team"] --> SPEC["Rack and board power spec"]
+  SPEC --> OCP["OCP / open ecosystem input"]
+  SPEC --> ODM["ODM and system vendor design"]
+  SPEC --> VENDOR["Power semiconductor and module qualification"]
+  ODM --> DEPLOY["AI cluster deployment"]
+  DEPLOY --> DATA["Efficiency, failure, and telemetry data"]
+  DATA --> SPEC
+```
+
+```mermaid
+flowchart TB
+  GOAL["Hyperscaler goals"] --> CAPEX["Lower capex per MW"]
+  GOAL --> OPEX["Lower energy and cooling cost"]
+  GOAL --> SPEED["Faster rack deployment"]
+  GOAL --> RES["Higher resilience and serviceability"]
+  GOAL --> OPEN["Avoid single-vendor lock-in"]
+```
+
+### Official Visual References
+| Organization | Visual Material to Review | Official Source |
+|---|---|---|
+| Open Compute Project | ORv3 and higher-power rack ecosystem visuals | https://www.opencompute.org/wiki/Open_Rack/SpecsAndDesigns |
+| Meta Engineering | open infrastructure and rack-power context | https://engineering.fb.com/category/data-center-engineering/ |
+| Microsoft Azure | datacenter infrastructure and power/cooling visuals | https://azure.microsoft.com/en-us/explore/global-infrastructure |
+| Google Data Centers | energy efficiency and infrastructure visuals | https://www.google.com/about/datacenters/ |
+| NVIDIA | AI rack system visuals that drive hyperscaler power needs | https://www.nvidia.com/en-us/data-center/gb200-nvl72/ |
 
 ## Detailed Content
 ### Strategy Matrix

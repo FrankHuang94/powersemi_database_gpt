@@ -1,5 +1,5 @@
 # Power Module and System Vendors
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** vendors, modules, power-shelves, UPS, Vicor, Delta, Vertiv
 
@@ -18,6 +18,37 @@ visibility and customer attribution remain limited.
 - [CONFIRMED] Vertiv and Eaton participate from facility power into rack-level infrastructure.
 - [CONFIRMED] Flex, Lite-On, and Acbel are important custom manufacturing/JDM suppliers.
 - [TO VERIFY] Specific NVIDIA/Vicor GB200 content should be tied to public platform evidence, not inference.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  DEV["Power devices"] --> MOD["Power module"]
+  MAG["Magnetics"] --> MOD
+  CTRL["Controller / driver"] --> MOD
+  MOD --> SHELF["Power shelf / rectifier"]
+  SHELF --> RACK["Rack power system"]
+  RACK --> DC["Datacenter deployment"]
+```
+
+```mermaid
+flowchart TB
+  SYS["Module and system differentiation"] --> DENS["Power density"]
+  SYS --> EFF["Efficiency curve"]
+  SYS --> REL["Reliability and redundancy"]
+  SYS --> COOL["Air or liquid cooling compatibility"]
+  SYS --> CERT["Safety and standards certification"]
+  SYS --> SERVICE["Field service model"]
+```
+
+### Official Visual References
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| Vicor | factorized power architecture and 48 V AI power diagrams | https://www.vicorpower.com/ |
+| Delta Electronics | power shelf, rectifier, and datacenter power-system visuals | https://www.deltaww.com/en-US/solutions/Data-Center |
+| Vertiv | rack power, cooling, and AI infrastructure diagrams | https://www.vertiv.com/en-us/solutions/high-density-ai/ |
+| Eaton | UPS and datacenter power distribution visuals | https://www.eaton.com/us/en-us/markets/data-centers.html |
+| Murata | power module and datacenter DC-DC visuals | https://www.murata.com/en-us/products/power |
+| Flex Power Modules | DC-DC module and datacenter power visuals | https://flexpowermodules.com/ |
 
 ## Detailed Content
 ### Vendor Matrix

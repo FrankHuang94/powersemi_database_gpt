@@ -1,5 +1,5 @@
 # Silicon Carbide Technology
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** SiC, MOSFET, substrates, capacity, reliability
 
@@ -20,6 +20,33 @@ applications while stressing highly leveraged suppliers.
 - [CORRECTION] SK Siltron is part of SK Group, not a Samsung subsidiary.
 - [CORRECTION] ST and Soitec have a SmartSiC supply relationship; ST's China SiC JV is with Sanan.
 - [ESTIMATED, 2025-2026] EV demand/capacity mismatch increased SiC pricing pressure and datacenter availability.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  POWDER["SiC powder / boule growth"] --> WAFER["SiC substrate wafer"]
+  WAFER --> EPI["Epitaxy"]
+  EPI --> DEVICE["MOSFET / diode fabrication"]
+  DEVICE --> PKG["Module or discrete package"]
+  PKG --> SYSTEM["PFC, HVDC, UPS, high-power conversion"]
+```
+
+```mermaid
+flowchart TB
+  SIC["SiC adoption gates"] --> SUB["Substrate diameter and defect density"]
+  SIC --> OX["Gate oxide reliability"]
+  SIC --> PKG["High-voltage package and isolation"]
+  SIC --> COST["Wafer cost and utilization"]
+  SIC --> QUAL["Automotive/industrial/datacenter qualification"]
+```
+
+### Official Visual References
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| Wolfspeed | SiC substrate, device, and 200 mm manufacturing visuals | https://www.wolfspeed.com/ |
+| onsemi | EliteSiC device and module application diagrams | https://www.onsemi.com/products/discrete-power-modules/silicon-carbide-sic |
+| STMicroelectronics | silicon carbide product and application visuals | https://www.st.com/en/power-transistors/sic-mosfets.html |
+| ROHM | SiC MOSFET and module package visuals | https://www.rohm.com/products/sic-power-devices |
 
 ## Detailed Content
 ### Device Physics and Reliability

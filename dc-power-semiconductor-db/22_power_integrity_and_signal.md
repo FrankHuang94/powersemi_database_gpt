@@ -1,5 +1,5 @@
 # Power Integrity and Signal
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** power-integrity, PDN, transient, capacitor, magnetics
 
@@ -17,6 +17,27 @@ connectors, cables, capacitors, inductors, and control loops must be modeled tog
 - [CONFIRMED] MLCC capacitance falls with DC bias, especially high-capacitance class-II dielectrics.
 - [CONFIRMED] Interleaved/coupled inductors can improve ripple and transient performance.
 - [ESTIMATED] Public GPU TDP is insufficient to determine actual rail di/dt or droop budget.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  VRM["VRM output"] --> PLANE["PCB planes / busbars"]
+  PLANE --> CAPS["Bulk, MLCC, package caps"]
+  CAPS --> PKG["Processor package"]
+  PKG --> DIE["On-die rails"]
+  LOAD["Load step"] --> DIE
+  DIE --> DROOP["Voltage droop / noise"]
+  DROOP --> VRM
+```
+
+```mermaid
+flowchart TB
+  PI["Power integrity workflow"] --> MODEL["PDN impedance model"]
+  MODEL --> SIM["Transient and frequency simulation"]
+  SIM --> LAYOUT["Layout, via, plane, and capacitor placement"]
+  LAYOUT --> MEAS["Oscilloscope / Bode / telemetry validation"]
+  MEAS --> LIMIT["Guardband and operating limit"]
+```
 
 ## Detailed Content
 ### Accelerator PI Snapshot

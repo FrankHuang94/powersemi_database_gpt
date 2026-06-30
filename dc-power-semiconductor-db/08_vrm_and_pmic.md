@@ -1,5 +1,5 @@
 # VRM and PMIC
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** VRM, PMIC, DrMOS, GPU, CPU, POL
 
@@ -18,6 +18,36 @@ placement justify a different architecture.
 - [CORRECTION] B200 SXM is up to roughly 1,000 W; 1,200 W figures are configuration/product-generation dependent.
 - [ESTIMATED] A sub-1 V, 1 kW rail implies more than 1,000 A before conversion and distribution margins.
 - [CONFIRMED] DrMOS integrates driver plus high/low-side MOSFETs to reduce parasitics and area.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  BUS["48 V or 12 V input"] --> IBC["Intermediate bus converter"]
+  IBC --> VRM["Multiphase VRM"]
+  VRM --> CAPS["Decoupling network"]
+  CAPS --> DIE["Sub-1 V accelerator rails"]
+  CTRL["Digital controller / telemetry"] --> VRM
+  DIE --> CTRL
+```
+
+```mermaid
+flowchart TB
+  VRM["VRM tradeoff"] --> RESP["Transient response"]
+  VRM --> DENS["Current density"]
+  VRM --> LOSS["Conversion loss"]
+  VRM --> HEIGHT["Board height and keepout"]
+  VRM --> PI["Power integrity"]
+  VRM --> SERVICE["Manufacturing and field service"]
+```
+
+### Official Visual References
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| Monolithic Power Systems | VRM, power module, and datacenter power-stage visuals | https://www.monolithicpower.com/en/applications/data-center.html |
+| Infineon | XDP, power stages, and multiphase VRM application diagrams | https://www.infineon.com/cms/en/applications/computing/data-center-and-servers/ |
+| Texas Instruments | multiphase controllers, power stages, and PMBus examples | https://www.ti.com/power-management/non-isolated-dc-dc-switching-regulators/multiphase-controllers/overview.html |
+| Renesas | digital multiphase controllers and power-stage diagrams | https://www.renesas.com/en/products/power-power-management/multiphase-controllers |
+| Analog Devices | digital power management and POL regulator visuals | https://www.analog.com/en/solutions/data-center.html |
 
 ## Detailed Content
 ### VRM Evolution

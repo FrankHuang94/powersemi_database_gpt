@@ -1,5 +1,5 @@
 # Integrated Power Semiconductor Vendors
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** vendors, IDM, financials, Infineon, TI, Renesas
 
@@ -19,6 +19,39 @@ revenue.
 - [CONFIRMED] Renesas gained Intersil server power and acquired Transphorm GaN in 2024.
 - [CONFIRMED] ST, onsemi, and ROHM are vertically invested in SiC.
 - [TO VERIFY] Infineon "$12k-$15k content per 130 kW rack" requires a primary cited disclosure.
+
+## Visual Guide
+```mermaid
+flowchart TB
+  IDM["Integrated power vendor"] --> DEV["Power devices"]
+  IDM --> CTRL["Controllers and drivers"]
+  IDM --> MODULE["Modules and reference designs"]
+  IDM --> SW["Digital tools and firmware"]
+  DEV --> WIN["Platform design win"]
+  CTRL --> WIN
+  MODULE --> WIN
+  SW --> WIN
+```
+
+```mermaid
+flowchart LR
+  INF["Infineon"] --> GAN["GaN / Si / controllers"]
+  TI["Texas Instruments"] --> CTRL["Analog, PMIC, controllers"]
+  ADI["Analog Devices"] --> DIG["Digital power and telemetry"]
+  REN["Renesas"] --> MULTI["Multiphase and GaN"]
+  ST["ST / onsemi / ROHM"] --> SIC["SiC and power discretes"]
+```
+
+### Official Visual References
+| Vendor | Visual Material to Review | Official Source |
+|---|---|---|
+| Infineon | datacenter power architecture, GaN, MOSFET, controller visuals | https://www.infineon.com/cms/en/applications/computing/data-center-and-servers/ |
+| Texas Instruments | server power, PMIC, controller, and power-stage diagrams | https://www.ti.com/applications/enterprise-systems/data-center-enterprise-computing/overview.html |
+| Analog Devices | data center power, telemetry, and digital power diagrams | https://www.analog.com/en/solutions/data-center.html |
+| Renesas | multiphase controller, power stage, and GaN product visuals | https://www.renesas.com/en/applications/data-center-computing |
+| STMicroelectronics | power management and SiC application visuals | https://www.st.com/content/st_com/en/applications/power-and-energy.html |
+| onsemi | EliteSiC and power conversion application visuals | https://www.onsemi.com/applications/industrial-cloud-power/cloud-power |
+| ROHM | SiC and power device application diagrams | https://www.rohm.com/products/sic-power-devices |
 
 ## Detailed Content
 ### Vendor Profiles

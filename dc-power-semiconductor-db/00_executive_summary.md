@@ -1,5 +1,5 @@
 # Executive Summary
-> **Last Updated:** 2026-06-10
+> **Last Updated:** 2026-06-30
 > **Status:** Draft
 > **Tags:** market, roadmap, AI-racks, WBG, strategy
 
@@ -22,6 +22,28 @@ standards maturity are as important as device efficiency.
 - [CONFIRMED, 2024] Infineon started 300 mm (12-inch) GaN wafer production development, a manufacturing-cost milestone [Source: Infineon, 2024].
 - [ESTIMATED, MED confidence, 2025] WBG adoption is strongest in PFC/primary conversion; low-voltage POL remains silicon-heavy.
 - [TO VERIFY] The prompt's "$12k-$15k per 130 kW rack" Infineon content claim requires a primary transcript/page citation.
+
+## Visual Guide
+```mermaid
+flowchart LR
+  GRID["Grid / UPS"] --> SHELF["AC-DC or DC power shelf"]
+  SHELF --> BUS["48 V / HVDC rack bus"]
+  BUS --> IBC["Intermediate bus converter"]
+  IBC --> VRM["VRM / PMIC near package"]
+  VRM --> LOAD["GPU / CPU / accelerator rails"]
+  LOAD --> TELE["Telemetry and digital control"]
+  TELE --> SHELF
+```
+
+```mermaid
+flowchart TB
+  AI["AI rack power growth"] --> ARCH["Higher-voltage distribution"]
+  AI --> WBG["GaN and SiC adoption"]
+  AI --> THERM["Thermal and power-integrity constraints"]
+  ARCH --> SUPPLY["Power shelf, busbar, connector, and protection redesign"]
+  WBG --> VENDOR["IDM, discrete, module, and startup competition"]
+  THERM --> ROI["Efficiency, uptime, and total cost of ownership"]
+```
 
 ## Detailed Content
 ### Strategic Themes
