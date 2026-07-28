@@ -1,5 +1,5 @@
 # Hyperscaler Power Strategy
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** hyperscalers, NVIDIA, Google, Meta, Microsoft, AWS
 
@@ -19,6 +19,10 @@ shelves, and facility equipment from merchant suppliers.
 - [PARTIALLY CONFIRMED] Microsoft publishes custom Maia infrastructure but detailed power silicon is limited.
 - [RUMORED] AWS custom power-management silicon and supplier attribution lack sufficient public evidence.
 - [CONFIRMED] GB200 NVL72 integrates 72 Blackwell GPUs in a liquid-cooled rack-scale system.
+- [CONFIRMED, 2026] NVIDIA has expanded MGX to a third-generation rack design for Vera Rubin
+  and published an 800 VDC migration path for MW-scale IT racks beginning with Kyber in 2027.
+- [CONFIRMED] NVIDIA publicly lists ecosystem participants for 800 VDC, but a logo/listing is
+  not evidence of revenue, shipment volume, or an exclusive design win.
 
 ## Visual Guide
 ```mermaid
@@ -59,7 +63,7 @@ flowchart TB
 | Meta | ORv3 rack/shelf/BBU | 48 V | OCP ecosystem | Shelf/system design confirmed | Open Rack |
 | Microsoft | OCP/HVDC research | 48/400 V concepts | Eaton/OCP ecosystem [verify SKU] | Maia power details limited | Maia/Azure |
 | AWS | custom server/accelerator | undisclosed | undisclosed | [RUMORED] | Trainium, Inferentia, Graviton |
-| NVIDIA | rack-scale GPU | 48 V ecosystem | ODM/module ecosystem | Platform specifications | GB200/GB300 |
+| NVIDIA | rack-scale GPU and AI-factory reference architecture | 54 V today; 800 VDC roadmap | Public 800 VDC ecosystem list | Platform specifications | GB200/GB300; Vera Rubin/Kyber |
 | AMD | OAM/rack platforms | 12/48 V ecosystem | OEM ecosystem | Platform specifications | Instinct |
 | Intel | server/accelerator | 12/48 V ecosystem | VRM ecosystem | VR specifications | Xeon/Gaudi |
 | Alibaba/Baidu/ByteDance | China cloud/AI | 48 V/domestic trend | [TO VERIFY] | [TO VERIFY] | Domestic substitution |
@@ -90,6 +94,7 @@ Related: [Master Index](README.md).
 | GB200 NVL72 CPU count | 36 Grace CPUs | NVIDIA | 2024 |
 | ORv3 nominal bus | 48 V | OCP | 2024 |
 | Meta HPR public target | 92 kW+ ecosystem | OCP | 2024 |
+| NVIDIA 800 VDC target | 1 MW IT racks and beyond, starting 2027 | NVIDIA | 2026 roadmap |
 | Google 24/7 CFE target | 2030 | Google | 2020/current |
 
 ## Open Questions / Gaps
@@ -104,3 +109,5 @@ Related: [Master Index](README.md).
 - Google data center efficiency | https://datacenters.google/efficiency/ | Accessed 2026-06-10
 - Microsoft Maia | https://azure.microsoft.com/en-us/blog/azure-maia-for-the-era-of-ai-from-silicon-to-software-to-systems/ | Accessed 2026-06-10
 - AWS Trainium | https://aws.amazon.com/machine-learning/trainium/ | Accessed 2026-06-10
+- NVIDIA 800 VDC architecture | https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/ | Accessed 2026-07-28
+- NVIDIA MGX third-generation rack roadmap | https://www.nvidia.com/en-us/data-center/products/mgx/ | Accessed 2026-07-28

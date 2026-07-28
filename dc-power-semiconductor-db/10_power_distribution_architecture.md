@@ -1,5 +1,5 @@
 # Power Distribution Architecture
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** ORv3, HVDC, power-shelf, busbar, BBU
 
@@ -17,7 +17,15 @@ architecture is optimal for every brownfield and greenfield datacenter.
 - [CONFIRMED] Rack-level BBUs can replace or complement centralized UPS designs.
 - [CONFIRMED] Busbars reduce harness resistance and improve current distribution at high power.
 - [ESTIMATED] 400 V DC architectures can remove one AC/DC stage in suitable facilities.
-- [RUMORED/ROADMAP] 800 V rack distribution is not yet a broadly adopted standard as of 2026.
+- [CONFIRMED, VENDOR ROADMAP] NVIDIA targets 800 VDC distribution for 1 MW IT racks and beyond
+  beginning in 2027; it is not yet a broadly adopted industry standard.
+- [CONFIRMED, 2026] Emerging SST vendors are targeting direct MV AC-to-800 VDC conversion,
+  combining conversion, protection, controls, and optional energy storage; published
+  performance remains vendor-reported until independent deployment data is available.
+- [CONFIRMED, 2026-07-13] Infineon and LS ELECTRIC signed an MoU covering power conversion
+  for energy storage, solid-state transformers, and solid-state circuit breakers for AI
+  datacenters and next-generation grids; the announcement is a collaboration roadmap, not a
+  deployment disclosure.
 
 ## Visual Guide
 ```mermaid
@@ -68,7 +76,7 @@ flowchart TB
 |---:|---|---|---|---|
 | 380 V DC | Fewer conversions | rectifier, DC protection, isolated DC/DC | telecom/DC operators | Deployed selectively |
 | 400 V DC | Aligns with emerging AI concepts | SiC/GaN front end, DAB/LLC | vendor/hyperscaler studies | 2024+ pilots |
-| 800 V DC | Lower current at extreme power | 1.2 kV SiC, isolation, connectors | roadmap advocates | 2027+ estimate |
+| 800 V DC | Lower current at MW-scale rack power | 1.2 kV SiC/GaN, isolation, DC protection, connectors, storage | NVIDIA ecosystem | 2027+ production target |
 
 ### Power Shelf Ecosystem
 
@@ -80,6 +88,8 @@ flowchart TB
 | Flex | hyperscale power platforms | custom | 48 V | custom | ODM/JDM |
 | Lite-On/Acbel | server PSUs/shelves | custom | 12/48 V | product-specific | ODM suppliers |
 | Eaton/Vertiv | facility-to-rack systems | kW-MW | AC/DC | product-specific | Infrastructure breadth |
+| Heron Power | Heron Link SST + SuperBBU [VENDOR SPEC] | 4.2 MW | 34.5 kV AC-800 VDC | 98.5% claimed | 800 VDC AI-rack foundation |
+| Amperesand | Medium-voltage SST [VENDOR SPEC] | product-specific | MV AC-LV/800 VDC | >98.5% claimed | First commercial units targeted for 2026 |
 
 ### BBU versus UPS
 
@@ -98,6 +108,7 @@ Related: [Master Index](README.md).
 |---|---|---|---|
 | ORv3 bus | 48 V nominal | OCP | 2024 |
 | HPR public ecosystem | 92 kW+ | OCP | 2024 |
+| NVIDIA 800 VDC roadmap | 1 MW IT racks and beyond, starting 2027 | NVIDIA | 2026 |
 | Telecom HVDC heritage | ~380 V DC | Industry deployments | 2025 |
 | Equal-power current at 400 V vs 48 V | 8.3x lower | P=VI calculation | 2026 |
 | Rack backup chemistry | Lithium-ion growing | OCP/vendor designs | 2025 |
@@ -111,3 +122,7 @@ Related: [Master Index](README.md).
 - OCP Rack and Power | https://www.opencompute.org/projects/rack-and-power | Accessed 2026-06-10
 - OCP ORv3 design guide | https://www.opencompute.org/documents/ocp-orv3-it-gear-design-guide-rev-02-june032024-pdf | Accessed 2026-06-10
 - IEEE 519 | https://standards.ieee.org/standard/519-2022.html | Accessed 2026-06-10
+- NVIDIA 800 VDC architecture | https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/ | Accessed 2026-07-28
+- Heron Power data-center system | https://heronpower.com/product/data-centers | Accessed 2026-07-28
+- Amperesand SST platform | https://www.amperesand.io/ | Accessed 2026-07-28
+- Infineon/LS ELECTRIC MoU | https://www.infineon.com/press-release/2026/infpr202607-121 | Accessed 2026-07-28

@@ -1,5 +1,5 @@
 # Power Module and System Vendors
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** vendors, modules, power-shelves, UPS, Vicor, Delta, Vertiv
 
@@ -18,6 +18,12 @@ visibility and customer attribution remain limited.
 - [CONFIRMED] Vertiv and Eaton participate from facility power into rack-level infrastructure.
 - [CONFIRMED] Flex, Lite-On, and Acbel are important custom manufacturing/JDM suppliers.
 - [TO VERIFY] Specific NVIDIA/Vicor GB200 content should be tied to public platform evidence, not inference.
+- [CONFIRMED, 2026] NVIDIA lists a broad 800 VDC ecosystem spanning semiconductor, power
+  conversion, switchgear, energy-storage, and infrastructure partners; inclusion is ecosystem
+  evidence, not proof of a production design win.
+- [CONFIRMED PRODUCT CLAIM] Heron Power and Amperesand are commercializing SiC-based
+  medium-voltage SST systems for 800 VDC AI infrastructure, with first deployments/units
+  targeted in 2026.
 
 ## Visual Guide
 ```mermaid
@@ -66,6 +72,8 @@ flowchart TB
 | Lite-On | 2301.TW | server PSUs/shelves | kW | AC-48/12 V | OEM/cloud | ODM scale |
 | Acbel | 6282.TW | server power | kW | AC-48/12 V | OEM/cloud | Taiwan ODM |
 | Great Wall Power | private/state-linked | PSU | kW | AC/DC | China cloud/OEM | Domestic ecosystem |
+| Heron Power | private | Heron Link SST + SuperBBU | 4.2 MW [VENDOR SPEC] | 34.5 kV AC-800 VDC | AI datacenters | 98.5% claimed; deployment proof pending |
+| Amperesand | private | medium-voltage SiC SST | product-specific | MV AC-LV/800 VDC | critical infrastructure | First commercial units targeted 2026 |
 
 ### Integration Layers
 
@@ -87,6 +95,7 @@ Related: [Master Index](README.md).
 | Vicor packaging | ChiP | Vicor | 2025 |
 | Delta scope | PSU through UPS/thermal | Delta | 2025 |
 | Advanced Energy heritage | Artesyn Embedded Power acquired 2019 | AE | 2019 |
+| NVIDIA 800 VDC ecosystem | 30+ listed electrical/semiconductor partners | NVIDIA | 2026 |
 
 ## Open Questions / Gaps
 - Build SKU-level power shelf tracker with efficiency curves and OCP accepted-product status.
@@ -99,3 +108,6 @@ Related: [Master Index](README.md).
 - Vertiv investor relations | https://investors.vertiv.com/ | Accessed 2026-06-10
 - Eaton datacenters | https://www.eaton.com/us/en-us/markets/data-centers.html | Accessed 2026-06-10
 - Advanced Energy | https://www.advancedenergy.com/ | Accessed 2026-06-10
+- NVIDIA 800 VDC ecosystem | https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/ | Accessed 2026-07-28
+- Heron Power datacenter system | https://heronpower.com/product/data-centers | Accessed 2026-07-28
+- Amperesand SST platform | https://www.amperesand.io/ | Accessed 2026-07-28

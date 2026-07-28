@@ -1,5 +1,5 @@
 # Discrete-Focused Power Semiconductor Vendors
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** vendors, Wolfspeed, Navitas, EPC, AOS, China
 
@@ -20,6 +20,9 @@ lineages, not independent public competitors.
 - [CONFIRMED, 2024] Transphorm was acquired by Renesas.
 - [CONFIRMED, 2021] Qorvo acquired UnitedSiC.
 - [ESTIMATED] Chinese SiC suppliers are scaling faster than their datacenter qualification evidence.
+- [CONFIRMED, 2026-07-07] Wolfspeed sued Navitas in US federal court, alleging infringement
+  of five patents by named GaNFast, GaNSlim, GaNSafe, GeneSiC, and SiCPAK product lines.
+  The complaint is an allegation; no merits decision is recorded as of 2026-07-28.
 
 ## Visual Guide
 ```mermaid
@@ -56,12 +59,15 @@ flowchart LR
 **Wolfspeed (WOLF)**  
 HQ: US | Technology: SiC materials/devices | Assets: Mohawk Valley 200 mm fab and North
 Carolina materials expansion. Financial: restructured in 2025 after debt/capacity stress.
-Strength: SiC IP/materials scale. Risk: utilization, pricing, customer concentration.
+Strength: SiC IP/materials scale. Wolfspeed created a dedicated Silicon Valley datacenter
+solutions team in June 2026. Risk: utilization, pricing, customer concentration, and litigation
+cost/uncertainty.
 
 **Navitas Semiconductor (NVTS)**  
 HQ: US/Ireland roots | Technology: GaNFast/GaNSafe GaN ICs plus GeneSiC. Claims a large AI
 datacenter opportunity and promotes high-voltage AI architectures; opportunity values are
-[COMPANY TARGET], not market consensus. Risk: small revenue base and design-win conversion.
+[COMPANY TARGET], not market consensus. Risk: small revenue base, design-win conversion, and
+the unresolved July 2026 Wolfspeed patent suit.
 
 **Efficient Power Conversion (private)**  
 HQ: US | Technology: eGaN, mostly GaN-on-Si, chip-scale FETs/ICs. Strength: low-voltage/high-
@@ -104,6 +110,7 @@ Related: [Master Index](README.md).
 | Navitas/GeneSiC | $100M stock + earnouts structure [verify] | Navitas | 2022 |
 | Infineon/GaN Systems | $830M announced | Infineon | 2023 |
 | Renesas/Transphorm | ~$339M equity value announced | Renesas | 2024 |
+| Wolfspeed v. Navitas filing | Five asserted US patents; merits unresolved | Wolfspeed complaint | 2026-07-07 |
 
 ## Open Questions / Gaps
 - Refresh Wolfspeed post-restructuring capitalization and factory utilization.
@@ -117,3 +124,5 @@ Related: [Master Index](README.md).
 - EPC | https://epc-co.com/ | Accessed 2026-06-10
 - Renesas/Transphorm | https://www.renesas.com/en/about/press-room/renesas-completes-acquisition-transphorm | Accessed 2026-06-10
 - Qorvo/UnitedSiC | https://www.qorvo.com/newsroom/news/2021/qorvo-acquires-unitedsic | Accessed 2026-06-10
+- Wolfspeed datacenter solutions team | https://www.wolfspeed.com/company/news-events/news/wolfspeed-launches-dedicated-data-center-solutions-team-in-silicon-valley/ | Accessed 2026-07-28
+- Wolfspeed v. Navitas announcement | https://www.wolfspeed.com/company/news-events/news/wolfspeed-files-patent-infringement-lawsuit-against-navitas-semiconductor/ | Accessed 2026-07-28

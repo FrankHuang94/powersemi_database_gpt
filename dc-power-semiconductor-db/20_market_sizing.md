@@ -1,5 +1,5 @@
 # Market Sizing
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** TAM, forecast, scenarios, content-per-kW
 
@@ -17,6 +17,12 @@ The baseline below is an analyst framework, not a purchased market-research data
 - [ESTIMATED, HIGH] Content per rack rises faster than rack count as accelerator TDP and conversion stages rise.
 - [ESTIMATED, MED] WBG ASP premiums fall while penetration rises, making revenue impact non-linear.
 - [TO VERIFY] $12k-$15k semiconductor content for a 130 kW rack requires primary-source confirmation.
+- [CONFIRMED, 2026] Infineon's AI power-solution category exceeded €700M in FY2025 and is
+  targeted at ~€1.5B in FY2026 and ~€2.5B in FY2027; this category is broader than the
+  database's device-only boundary and is a useful upper-bound cross-check, not a share figure.
+- [CONFIRMED, 2025] onsemi disclosed >$250M AI-datacenter revenue; MPS disclosed $732.5M
+  storage/computing and $701.8M enterprise-data revenue, neither of which is a clean
+  datacenter-power-semiconductor measure.
 
 ## Visual Guide
 ```mermaid
@@ -76,6 +82,19 @@ Semiconductor revenue = AI rack shipments x average rack kW x semiconductor doll
 adjusted for non-AI servers, replacement, ASP erosion, custom silicon, and channel inventory.
 See [25_investment_and_ma_tracker.md](25_investment_and_ma_tracker.md).
 
+### Public-Disclosure Cross-Checks
+
+| Company | Period | Disclosure | Boundary caveat |
+|---|---|---:|---|
+| Infineon | FY2025 actual | >€700M AI power solutions | Vendor-defined grid-to-core category |
+| Infineon | FY2026/FY2027 target | ~€1.5B / ~€2.5B | Forward-looking company target |
+| onsemi | FY2025 actual | >$250M AI-datacenter revenue | Company category; product mix not fully disclosed |
+| MPS | FY2025 actual | $732.5M storage/computing + $701.8M enterprise data | Includes memory, storage, notebook, graphics, and other non-AI content |
+
+> ⚠️ Note: These disclosures cannot be summed or directly compared with the $4.0B model.
+They demonstrate why the TAM boundary must state whether it includes controllers, modules,
+sensing, protection, and non-semiconductor power content.
+
 ## Data Tables (where applicable)
 | Field | Value | Source | Date |
 |---|---|---|---|
@@ -96,3 +115,6 @@ See [25_investment_and_ma_tracker.md](25_investment_and_ma_tracker.md).
 - Omdia datacenter research | https://omdia.tech.informa.com/ | Accessed 2026-06-10
 - TechInsights power semiconductor analysis | https://www.techinsights.com/ | Accessed 2026-06-10
 - Company investor-day disclosures | respective IR sites | Accessed 2026-06-10
+- Infineon FY2026 AGM CEO speech | https://www.infineon.com/assets/row/public/documents/corporate/investors/annual-general-meeting/2026/agm2026-key-points-speech-jochen-hanebeck-chief-executive-officer-v01-00-en.pdf | Accessed 2026-07-28
+- onsemi 2025 annual report | https://investor.onsemi.com/static-files/8d674d4f-cc6b-44e5-8e31-e898ab0b4371 | Accessed 2026-07-28
+- MPS 2025 Form 10-K | https://media.monolithicpower.com/mps_cms_document/2/0/2025_form_10-k_final.pdf | Accessed 2026-07-28

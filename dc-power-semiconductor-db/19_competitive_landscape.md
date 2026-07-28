@@ -1,5 +1,5 @@
 # Competitive Landscape
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** competition, Porter, margins, positioning, M&A
 
@@ -18,6 +18,12 @@ suppliers.
 - [CONFIRMED] Vicor competes architecturally with conventional multiphase/intermediate-bus designs.
 - [ESTIMATED] SiC oversupply reduces substrate/device pricing power through the mid-2020s.
 - [CONFIRMED] Recent M&A consolidated GaN and SiC specialists into larger portfolios.
+- [CONFIRMED, 2026] Public financial disclosures sharpen the AI-power comparison: Infineon
+  targets ~€1.5B FY2026 AI-power revenue; onsemi reported >$250M FY2025 AI-datacenter revenue;
+  MPS reported $1.434B combined storage/computing and enterprise-data revenue, which is not a
+  pure AI-power measure.
+- [CONFIRMED, 2026-07] GaN/SiC IP enforcement intensified through final Infineon/Innoscience
+  US remedies and Wolfspeed's unresolved suit against Navitas.
 
 ## Visual Guide
 ```mermaid
@@ -83,6 +89,10 @@ flowchart TB
 | Vicor | High | device-agnostic modules | Low | Very high | Low | Architecture specialist |
 | Delta/Vertiv | High | sourced | Low | High | Very high | System integrators |
 
+> ⚠️ Note: Infineon, onsemi, and MPS use different reporting categories. AI power,
+AI datacenter, storage/computing, and enterprise data are not interchangeable and should not
+be used to calculate share without a product-level bridge.
+
 ### M&A History
 
 | Year | Acquirer | Target | Value | Rationale | DC impact |
@@ -119,3 +129,8 @@ Related: [Master Index](README.md).
 - Company transaction announcements | respective investor-relations sites | Accessed 2026-06-10
 - Infineon/GaN Systems | https://www.infineon.com/cms/en/about-infineon/press/press-releases/2023/INFXX202303-074.html | Accessed 2026-06-10
 - Renesas/Transphorm | https://www.renesas.com/en/about/press-room/renesas-completes-acquisition-transphorm | Accessed 2026-06-10
+- Infineon FY2026 AGM CEO speech | https://www.infineon.com/assets/row/public/documents/corporate/investors/annual-general-meeting/2026/agm2026-key-points-speech-jochen-hanebeck-chief-executive-officer-v01-00-en.pdf | Accessed 2026-07-28
+- onsemi 2025 annual report | https://investor.onsemi.com/static-files/8d674d4f-cc6b-44e5-8e31-e898ab0b4371 | Accessed 2026-07-28
+- MPS 2025 Form 10-K | https://media.monolithicpower.com/mps_cms_document/2/0/2025_form_10-k_final.pdf | Accessed 2026-07-28
+- Infineon US ITC final determination | https://www.infineon.com/press-release/2026/ifxpr202607-118 | Accessed 2026-07-28
+- Wolfspeed v. Navitas announcement | https://www.wolfspeed.com/company/news-events/news/wolfspeed-files-patent-infringement-lawsuit-against-navitas-semiconductor/ | Accessed 2026-07-28

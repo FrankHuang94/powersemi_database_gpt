@@ -1,5 +1,5 @@
 # Silicon Carbide Technology
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** SiC, MOSFET, substrates, capacity, reliability
 
@@ -20,6 +20,11 @@ applications while stressing highly leveraged suppliers.
 - [CORRECTION] SK Siltron is part of SK Group, not a Samsung subsidiary.
 - [CORRECTION] ST and Soitec have a SmartSiC supply relationship; ST's China SiC JV is with Sanan.
 - [ESTIMATED, 2025-2026] EV demand/capacity mismatch increased SiC pricing pressure and datacenter availability.
+- [CONFIRMED, 2026] Wolfspeed completed the final Renesas-related equity issuance after CFIUS
+  clearance in January 2026, closing a remaining restructuring milestone.
+- [CONFIRMED, 2026] Wolfspeed shifted Durham 150 mm device production to its 200 mm Mohawk
+  Valley fab and reported demonstrating 300 mm SiC wafer capability; 300 mm is a development
+  milestone, not a volume-production baseline.
 
 ## Visual Guide
 ```mermaid
@@ -85,7 +90,7 @@ flowchart TB
 | Company/site | Substrate/device | Diameter | 2026 status | Investment/status |
 |---|---|---:|---|---|
 | Wolfspeed Mohawk Valley | Devices | 200 mm | Ramping | Restructured balance sheet |
-| Wolfspeed JP manufacturing center | Materials | 200 mm target | Ramp/qualification | Multi-billion program |
+| Wolfspeed John Palmour Manufacturing Center, Siler City, NC | Materials | 200 mm | Ramp/qualification | Restructured program |
 | Coherent | Substrates | 150/200 mm | Commercial/ramping | Merchant supplier |
 | SiCrystal/ROHM | Substrates | 150/200 mm path | Integrated | European base |
 | ST/Sanan JV | Devices | 200 mm plan | Ramp plan | China manufacturing |
@@ -108,6 +113,8 @@ preferred as power and voltage rise. See [21_thermal_management.md](21_thermal_m
 | Common DC voltage classes | 650/1,200 V | Vendor portfolios | 2025 |
 | Mohawk Valley wafer diameter | 200 mm | Wolfspeed | 2025 |
 | Wolfspeed Chapter 11 filing | June 30, 2025 | Wolfspeed/court disclosures | 2025 |
+| Wolfspeed/Renesas restructuring milestone | CFIUS clearance and final equity issuance | Wolfspeed | 2026-01-30 |
+| Wolfspeed 300 mm status | Demonstrated wafer capability; not HVM | Wolfspeed Q2 FY2026 | 2026 |
 | ST China SiC partner | Sanan | STMicroelectronics | 2023 |
 
 ## Open Questions / Gaps
@@ -118,6 +125,8 @@ preferred as power and voltage rise. See [21_thermal_management.md](21_thermal_m
 
 ## References
 - Wolfspeed restructuring | https://investor.wolfspeed.com/ | Accessed 2026-06-10
+- Wolfspeed restructuring completion milestone | https://investor.wolfspeed.com/news/news-details/2026/Wolfspeed-Announces-CFIUS-Clearance-and-Completion-of-Equity-Issuance-to-Renesas-as-Part-of-Court-Approved-Restructuring/default.aspx | Accessed 2026-07-28
+- Wolfspeed Q2 FY2026 results | https://assets.wolfspeed.com/uploads/2026/02/Wolfspeed_Q2_2026_Earnings_Release.pdf | Accessed 2026-07-28
 - ST and Sanan SiC JV | https://newsroom.st.com/media-center/press-item.html/c3184.html | Accessed 2026-06-10
 - Soitec SmartSiC | https://www.soitec.com/en/products/smartcut/smartsic | Accessed 2026-06-10
 - ROHM SiC | https://www.rohm.com/sic | Accessed 2026-06-10

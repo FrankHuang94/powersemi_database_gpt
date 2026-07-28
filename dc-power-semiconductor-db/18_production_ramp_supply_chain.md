@@ -1,5 +1,5 @@
 # Production Ramp and Supply Chain
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** supply-chain, substrates, foundry, packaging, capacity
 
@@ -18,6 +18,12 @@ and yields are normalized.
 - [CONFIRMED] GaN power production spans 150, 200, and announced 300 mm lines.
 - [CORRECTION] SK Siltron is an SK Group company.
 - [CONFIRMED] TSMC, GlobalFoundries, Tower, X-Fab, and SSMC serve analog/power IC ecosystems.
+- [CONFIRMED, 2026-07-02] Infineon opened its €5B Dresden Smart Power Fab ahead of schedule,
+  doubling Dresden capacity for power and analog/mixed-signal products and adding 1,000 jobs.
+- [CONFIRMED, 2026] onsemi is developing 650 V lateral GaN products on GlobalFoundries'
+  200 mm e-mode GaN-on-Si process and is separately sampling 700/1,200 V vertical GaN.
+- [CONFIRMED, 2026] Wolfspeed reported demonstrating 300 mm SiC wafer capability; its volume
+  device baseline remains the 200 mm Mohawk Valley ramp.
 
 ## Visual Guide
 ```mermaid
@@ -76,6 +82,7 @@ OEM/ODM qualification -> hyperscaler deployment.
 | Tower | analog/BCD | Power ICs | Specialty focus |
 | X-Fab | HV/BCD | Drivers/controllers | Auto/industrial |
 | SSMC | specialty analog | Power/automotive | NXP-linked JV heritage |
+| GlobalFoundries/onsemi | 200 mm e-mode GaN-on-Si | 650 V lateral GaN devices | Samples targeted H1 2026; volume status to verify |
 
 ### Packaging
 
@@ -104,6 +111,9 @@ Related: [Master Index](README.md).
 |---|---|---|---|
 | SiC production transition | 150 to 200 mm | Supplier disclosures | 2025 |
 | GaN announced maximum | 300 mm | Infineon | 2024 |
+| Infineon Dresden Smart Power Fab | €5B investment; opened 2026-07-02; Dresden capacity doubled | Infineon | 2026 |
+| onsemi vertical GaN | 700/1,200 V early-access sampling; late-2026 volume target | onsemi | 2026 |
+| Wolfspeed 300 mm SiC | Wafer capability demonstrated; not HVM | Wolfspeed | 2026 |
 | US SiC device site | Mohawk Valley, NY | Wolfspeed | 2025 |
 | US SiC materials site | Siler City, NC | Wolfspeed | 2025 |
 | CHIPS support relevance | WBG/domestic capacity eligible | US Commerce | 2024-2025 |
@@ -119,3 +129,7 @@ Related: [Master Index](README.md).
 - Wolfspeed manufacturing | https://www.wolfspeed.com/company/manufacturing/ | Accessed 2026-06-10
 - GlobalFoundries power technologies | https://gf.com/technology-platforms/ | Accessed 2026-06-10
 - X-Fab technologies | https://www.xfab.com/technology | Accessed 2026-06-10
+- Infineon Dresden Smart Power Fab | https://www.infineon.com/press-release/2026/ifxpr202607-117 | Accessed 2026-07-28
+- onsemi/GlobalFoundries GaN collaboration | https://investor.onsemi.com/news-releases/news-release-details/onsemi-develop-next-generation-gan-power-devices-globalfoundries | Accessed 2026-07-28
+- onsemi Q1 2026 investor presentation | https://investor.onsemi.com/static-files/47c2ca2d-07d7-4d18-aa0b-87cc657b1ef4 | Accessed 2026-07-28
+- Wolfspeed Q2 FY2026 results | https://assets.wolfspeed.com/uploads/2026/02/Wolfspeed_Q2_2026_Earnings_Release.pdf | Accessed 2026-07-28

@@ -1,5 +1,5 @@
 # Datacenter Power Semiconductor Database
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** index, datacenter, power-semiconductors, AI-infrastructure
 
@@ -20,38 +20,42 @@ as audited facts.
 - [CONFIRMED] Vendor coverage spans devices, controllers, modules, systems, substrates, and ODMs.
 - [ESTIMATED, MED confidence, 2025] AI racks are moving from 30-50 kW toward 100-140 kW configurations.
 - [CONFIRMED, 2024] OCP Open Rack v3 establishes a 48 V rack bus architecture.
+- [CONFIRMED, 2026] NVIDIA now positions 800 VDC as the distribution architecture for
+  MW-scale AI racks, with production deployment beginning with Kyber systems in 2027.
+- [CONFIRMED, 2026] July updates include Infineon's Dresden Smart Power Fab opening,
+  Infineon/LS ELECTRIC DC-infrastructure collaboration, and new GaN/SiC litigation milestones.
 
 ## Detailed Content
 ### Quick Access
 
 | Section | File | Status | Last Updated |
 |---|---|---:|---:|
-| Executive summary | [00](00_executive_summary.md) | Draft | 2026-06-30 |
+| Executive summary | [00](00_executive_summary.md) | Draft | 2026-07-28 |
 | Technology overview and glossary | [01](01_technology_overview.md) | Draft | 2026-06-30 |
-| Architecture roadmap | [02](02_power_architecture_roadmap.md) | Draft | 2026-06-30 |
+| Architecture roadmap | [02](02_power_architecture_roadmap.md) | Draft | 2026-07-28 |
 | Wide-bandgap overview | [03](03_wide_bandgap_semiconductors.md) | Draft | 2026-06-30 |
-| GaN technology | [04](04_gan_technology.md) | Draft | 2026-06-30 |
-| SiC technology | [05](05_sic_technology.md) | Draft | 2026-06-30 |
+| GaN technology | [04](04_gan_technology.md) | Draft | 2026-07-28 |
+| SiC technology | [05](05_sic_technology.md) | Draft | 2026-07-28 |
 | Silicon devices | [06](06_silicon_power_devices.md) | Draft | 2026-06-30 |
 | Conversion topology | [07](07_power_conversion_topology.md) | Draft | 2026-06-30 |
 | VRM and PMIC | [08](08_vrm_and_pmic.md) | Draft | 2026-06-30 |
 | Digital power | [09](09_digital_power_management.md) | Draft | 2026-06-30 |
-| Distribution architecture | [10](10_power_distribution_architecture.md) | Draft | 2026-06-30 |
-| Integrated vendors | [11](11_vendors_integrated.md) | Draft | 2026-06-30 |
-| Discrete vendors | [12](12_vendors_discrete.md) | Draft | 2026-06-30 |
-| Module/system vendors | [13](13_vendors_modules_and_systems.md) | Draft | 2026-06-30 |
-| Startup watchlist | [14](14_startups_watchlist.md) | Draft | 2026-06-30 |
-| Hyperscaler strategies | [15](15_hyperscaler_power_strategy.md) | Draft | 2026-06-30 |
-| Patents and IP | [16](16_patents_ip_landscape.md) | Draft | 2026-06-30 |
+| Distribution architecture | [10](10_power_distribution_architecture.md) | Draft | 2026-07-28 |
+| Integrated vendors | [11](11_vendors_integrated.md) | Draft | 2026-07-28 |
+| Discrete vendors | [12](12_vendors_discrete.md) | Draft | 2026-07-28 |
+| Module/system vendors | [13](13_vendors_modules_and_systems.md) | Draft | 2026-07-28 |
+| Startup watchlist | [14](14_startups_watchlist.md) | Draft | 2026-07-28 |
+| Hyperscaler strategies | [15](15_hyperscaler_power_strategy.md) | Draft | 2026-07-28 |
+| Patents and IP | [16](16_patents_ip_landscape.md) | Draft | 2026-07-28 |
 | Research papers | [17](17_key_research_papers.md) | Draft | 2026-06-30 |
-| Supply chain | [18](18_production_ramp_supply_chain.md) | Draft | 2026-06-30 |
-| Competition | [19](19_competitive_landscape.md) | Draft | 2026-06-30 |
-| Market sizing | [20](20_market_sizing.md) | Draft | 2026-06-30 |
+| Supply chain | [18](18_production_ramp_supply_chain.md) | Draft | 2026-07-28 |
+| Competition | [19](19_competitive_landscape.md) | Draft | 2026-07-28 |
+| Market sizing | [20](20_market_sizing.md) | Draft | 2026-07-28 |
 | Thermal management | [21](21_thermal_management.md) | Draft | 2026-06-30 |
 | Power integrity | [22](22_power_integrity_and_signal.md) | Draft | 2026-06-30 |
-| Standards | [23](23_standards_and_regulatory.md) | Draft | 2026-06-30 |
+| Standards | [23](23_standards_and_regulatory.md) | Draft | 2026-07-28 |
 | Sustainability | [24](24_sustainability_and_efficiency.md) | Draft | 2026-06-30 |
-| Investment/M&A | [25](25_investment_and_ma_tracker.md) | Draft | 2026-06-30 |
+| Investment/M&A | [25](25_investment_and_ma_tracker.md) | Draft | 2026-07-28 |
 
 ### Visual Navigation
 Every numbered section now includes a `Visual Guide` with GitHub-rendered Mermaid diagrams. The diagrams are self-authored summaries of the conversion chain, roadmap, device choices, vendor ecosystem, and investment logic, so they can be reviewed and versioned as text.
@@ -201,7 +205,14 @@ Scope covers utility-to-chip conversion, distribution, management, and control. 
 - Add archived source snapshots where licensing permits.
 - Reconcile vendor naming after acquisitions and divestitures on every quarterly refresh.
 
+## Refresh Log
+
+| Date | Scope | Material additions |
+|---|---|---|
+| 2026-07-28 | Quarterly high-change sections | NVIDIA 800 VDC/Kyber roadmap; July 2026 Infineon manufacturing, collaboration, and GaN-IP events; Wolfspeed/Navitas litigation; vendor FY2025/FY2026 financial baselines; onsemi GaN roadmap; SST startup coverage |
+
 ## References
 - Open Compute Project | https://www.opencompute.org/ | Accessed 2026-06-10
 - PMBus | https://pmbus.org/ | Accessed 2026-06-10
 - IEEE Power Electronics Society | https://www.ieee-pels.org/ | Accessed 2026-06-10
+- NVIDIA 800 VDC architecture | https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/ | Accessed 2026-07-28

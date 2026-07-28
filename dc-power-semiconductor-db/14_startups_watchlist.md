@@ -1,5 +1,5 @@
 # Startups Watchlist
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** startups, venture, GaN, SiC, magnetics, M&A
 
@@ -18,6 +18,12 @@ Unverified values are omitted and marked for primary-source confirmation.
 - [CONFIRMED] Exagan was acquired by ST in 2020; UnitedSiC by Qorvo in 2021.
 - [CONFIRMED] Enpirion assets moved from Intel to MPS in 2020.
 - [CORRECTION] Heliogen, Nextracker, and Movella are not direct DC power-semiconductor startups.
+- [CONFIRMED, 2026] Cambridge GaN Devices and NXP announced a long-term collaboration for
+  GaN-based system solutions targeting datacenter, automotive, and industrial power.
+- [CONFIRMED, COMPANY DISCLOSURE] Amperesand reports more than $100M total funding and targets
+  first commercial medium-voltage SiC SST units in 2026.
+- [CONFIRMED PRODUCT CLAIM] Heron Power specifies a 4.2 MW, 34.5 kV AC-to-800 VDC Heron Link
+  SST with integrated battery buffering; independent deployment validation is pending.
 
 ## Visual Guide
 ```mermaid
@@ -43,7 +49,7 @@ flowchart LR
 
 | Company | Founded/HQ | Stage/funding | Technology | DC target | M&A view | Risk |
 |---|---|---|---|---|---|---|
-| Cambridge GaN Devices | 2016/UK | Private; [TO VERIFY] | ICeGaN e-mode GaN | PSU/PFC | MAYBE | Scaling/competition |
+| Cambridge GaN Devices | 2016/UK | Private | ICeGaN e-mode GaN; NXP collaboration | PSU/PFC | MAYBE | Scaling/competition |
 | Ideal Power | US/public | Nasdaq: IPWR | B-TRAN bidirectional switch | UPS/BDC | MAYBE | Commercial adoption |
 | Tagore Technology | US/India | Private; [TO VERIFY] | GaN RF/power | power conversion adjacent | MAYBE | DC evidence limited |
 | Odyssey Semiconductor | US | Private; [TO VERIFY] | vertical GaN | high-voltage conversion | MAYBE | Process scale |
@@ -51,6 +57,8 @@ flowchart LR
 | SemiQ | US/private | Private; [TO VERIFY] | SiC devices/modules | PFC/UPS | YES/MAYBE | Scale |
 | Halo Microelectronics | China/US links | Private; [TO VERIFY] | analog/power ICs | server/consumer | MAYBE | Disclosure |
 | Celtonn/Celonics [name verify] | [TO VERIFY] | [TO VERIFY] | GaN/module claim | [TO VERIFY] | UNKNOWN | Entity ambiguity |
+| Amperesand | US/Singapore | Private; >$100M total funding [COMPANY DISCLOSURE] | SiC medium-voltage SST | MV AC-to-800 VDC AI infrastructure | MAYBE | First commercial units/qualification |
+| Heron Power | US/private | Private; [TO VERIFY] | SST, DC protection, controls, SuperBBU | 34.5 kV AC-to-800 VDC | MAYBE | Vendor claims/deployment proof |
 
 ### Acquired or Mature Companies
 
@@ -87,6 +95,8 @@ Related: [Master Index](README.md).
 | MPS/Enpirion assets | Acquisition | MPS/Intel | 2020 |
 | Murata/Peregrine | Acquisition | Murata | 2014 |
 | CGD technology | ICeGaN | CGD | 2025 |
+| CGD/NXP collaboration | Long-term GaN system-solutions collaboration | CGD | 2026-06-09 |
+| Amperesand funding | >$100M total [COMPANY DISCLOSURE] | Amperesand | 2026 |
 
 ## Open Questions / Gaps
 - Verify legal entities, funding totals, and latest rounds for every active private company.
@@ -98,3 +108,6 @@ Related: [Master Index](README.md).
 - Ideal Power | https://ir.idealpower.com/ | Accessed 2026-06-10
 - ST acquires Exagan | https://newsroom.st.com/media-center/press-item.html/t4261.html | Accessed 2026-06-10
 - MPS acquires Enpirion assets | https://www.monolithicpower.com/en/about-mps/newsroom.html | Accessed 2026-06-10
+- CGD/NXP collaboration | https://camgandevices.com/en/p/cgd-joins-forces-with-nxp-semiconductors-to-accelerate-time-to-market/ | Accessed 2026-07-28
+- Amperesand | https://www.amperesand.io/about | Accessed 2026-07-28
+- Heron Power datacenter system | https://heronpower.com/product/data-centers | Accessed 2026-07-28

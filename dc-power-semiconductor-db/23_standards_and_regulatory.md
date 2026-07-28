@@ -1,5 +1,5 @@
 # Standards and Regulatory
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** standards, OCP, PMBus, IEC, IEEE, regulation
 
@@ -18,6 +18,12 @@ ATX/PCIe connector rules do not universally govern rack-scale accelerators, and 
 - [CONFIRMED] IEEE 519 addresses harmonic control at the point of common coupling.
 - [CONFIRMED] IEC/UL 62368-1 replaces legacy 60950-1 for many ICT products.
 - [CONFIRMED] JEDEC JEP173 addresses GaN dynamic on-resistance measurement, not full product qualification.
+- [CONFIRMED, 2026] NVIDIA's 800 VDC publication is an architecture and partner roadmap,
+  not an OCP/IEC/UL rack-power standard. Treat 2027 production timing separately from
+  standards maturity.
+- [CONFIRMED, 2026-07-28] OCP's Data Center Facility Power subproject lists its DC power
+  white paper v1.0 as released in March 2026 and v1.1 as planned for July 2026; the project
+  page does not yet confirm v1.1 release.
 
 ## Visual Guide
 ```mermaid
@@ -55,6 +61,8 @@ flowchart LR
 | AEC-Q101 | AEC | Discrete qualification | device/auto | Proxy, not DC-specific |
 | IEC/UL 62368-1 | IEC/UL | Hazard-based ICT safety | PSU/system | Active |
 | 80 PLUS | CLEAResult | PSU efficiency certification | PSU | Active |
+| OCP DCF Power Distribution white paper | OCP | Facility DC architecture workstreams | facility | v1.0 released 2026-03; v1.1 listed as planned 2026-07 |
+| NVIDIA 800 VDC architecture | Vendor ecosystem | 800 VDC AI-factory/rack migration | facility/rack | Roadmap, not a consensus standard |
 
 ### United States
 
@@ -91,6 +99,7 @@ Related: [Master Index](README.md).
 | PMBus family | Revision 1.4 | PMBus | 2023+ |
 | ORv3 bus | 48 V | OCP | 2024 |
 | GaN dynamic RON guide | JEP173 | JEDEC | current |
+| OCP DCF Power white paper | v1.0 released; v1.1 planned | OCP project page | 2026-07-28 status |
 
 ## Open Questions / Gaps
 - Link exact clauses and editions applicable to each product boundary.
@@ -104,3 +113,5 @@ Related: [Master Index](README.md).
 - IEEE 519-2022 | https://standards.ieee.org/standard/519-2022.html | Accessed 2026-06-10
 - IEC 62368-1 | https://webstore.iec.ch/en/publication/27412 | Accessed 2026-06-10
 - US BIS | https://www.bis.gov/ | Accessed 2026-06-10
+- OCP Data Center Facility Power | https://www.opencompute.org/wiki/Data_Center_Facility/Power | Accessed 2026-07-28
+- NVIDIA 800 VDC architecture | https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/ | Accessed 2026-07-28

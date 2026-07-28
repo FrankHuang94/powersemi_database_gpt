@@ -1,5 +1,5 @@
 # GaN Technology
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-07-28
 > **Status:** Draft
 > **Tags:** GaN, HEMT, substrates, PFC, reliability
 
@@ -19,6 +19,12 @@ disciplined design. Datacenter revenue is concentrated in AC/DC PFC and high-den
 - [CONFIRMED] Totem-pole PFC prototypes/products can exceed 99% peak efficiency under specified conditions.
 - [CORRECTION] Navitas GeneSiC is a SiC product brand, not a fully integrated GaN driver/controller.
 - [CONFIRMED, 2023-2024] Infineon acquired GaN Systems; Renesas acquired Transphorm.
+- [CONFIRMED, 2026] onsemi is sampling 700 V/1,200 V vertical GaN to early-access customers
+  and targets volume production in late 2026; the company also plans 650 V lateral GaN on
+  GlobalFoundries' 200 mm e-mode GaN-on-Si process [Source: onsemi, 2026].
+- [CONFIRMED, 2026-07] The US ITC import/sales remedies against infringing Innoscience
+  products became final after Presidential Review, while German courts issued additional
+  infringement rulings in Infineon's favor [Source: Infineon, 2026-07-07].
 
 ## Visual Guide
 ```mermaid
@@ -76,6 +82,7 @@ flowchart TB
 | TI | LMG | 100/600-650 V | Driver-integrated stages | PFC/DC-DC |
 | Renesas | Transphorm SuperGaN | 650 V | Cascode/discrete | PFC/industrial |
 | STMicroelectronics | MasterGaN | 600-650 V | Half bridge + drivers | PSU/industrial |
+| onsemi | GaNEXUS lateral/vertical GaN | 650 V lateral; 700/1,200 V vertical roadmap | discrete/integrated roadmap | AI PSU/800 V conversion |
 
 > ⚠️ Note: Price is channel-, volume-, package-, and date-dependent; distributor spot prices
 are not a valid proxy for hyperscaler/OEM contract ASP.
@@ -95,13 +102,18 @@ are not a valid proxy for hyperscaler/OEM contract ASP.
 | 200 mm / 8-inch | Scaling | Better tool/foundry compatibility |
 | 300 mm / 12-inch | Announced by Infineon in 2024 | Potential die-cost/productivity step |
 
+onsemi's vertical GaN program is GaN-on-GaN rather than the mainstream lateral GaN-on-Si
+platform. Early-access sampling and a late-2026 volume target should not be treated as
+qualified mass deployment until production and field data are disclosed.
+
 ### IP and Qualification
 
 JEDEC JEP173 provides dynamic on-resistance measurement guidance. AEC-Q101 is used by some
 vendors as an automotive reliability benchmark but is not a datacenter-specific qualification.
 Key IP clusters include e-mode process/field plates, monolithic driver integration, protection,
-and low-inductance packaging. Patent counts such as "300+" must be normalized by family and
-legal status before comparison [See: 16_patents_ip_landscape.md].
+and low-inductance packaging. Infineon reported about 450 GaN patent families in July 2026,
+but that owner-reported figure still requires independent normalization by legal status and
+jurisdiction [See: 16_patents_ip_landscape.md].
 
 Related: [Master Index](README.md).
 
@@ -112,6 +124,8 @@ Related: [Master Index](README.md).
 | Infineon wafer milestone | 300 mm GaN development | Infineon | 2024 |
 | GaN Systems acquisition | $830M announced transaction value | Infineon | 2023 |
 | Transphorm owner | Renesas | Renesas | 2024 |
+| onsemi vertical GaN roadmap | 700/1,200 V sampling; late-2026 volume target | onsemi | 2026 |
+| Infineon reported GaN portfolio | ~450 patent families [OWNER-REPORTED] | Infineon | 2026-07 |
 | Peak PFC efficiency | >99% under design-specific conditions | Vendor reference designs | 2024-2025 |
 
 ## Open Questions / Gaps
@@ -126,3 +140,7 @@ Related: [Master Index](README.md).
 - ST MasterGaN | https://www.st.com/en/power-management/mastergan.html | Accessed 2026-06-10
 - TI GaN | https://www.ti.com/power-management/gallium-nitride/overview.html | Accessed 2026-06-10
 - EPC products | https://epc-co.com/epc/products/gan-fets-and-ics | Accessed 2026-06-10
+- onsemi/GF 200 mm lateral GaN collaboration | https://investor.onsemi.com/news-releases/news-release-details/onsemi-develop-next-generation-gan-power-devices-globalfoundries | Accessed 2026-07-28
+- onsemi Q1 2026 investor presentation | https://investor.onsemi.com/static-files/47c2ca2d-07d7-4d18-aa0b-87cc657b1ef4 | Accessed 2026-07-28
+- Infineon US ITC final determination | https://www.infineon.com/press-release/2026/ifxpr202607-118 | Accessed 2026-07-28
+- Infineon German infringement ruling | https://www.infineon.com/press-release/2026/infxx202606-115 | Accessed 2026-07-28
