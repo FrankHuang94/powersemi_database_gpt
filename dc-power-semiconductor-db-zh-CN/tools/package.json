@@ -1,0 +1,14 @@
+{
+  "name": "dc-power-semiconductor-db-zh-cn-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Builds the print-ready PDF of the Simplified Chinese reference translation.",
+  "scripts": {
+    "build": "node build_pdf.cjs"
+  },
+  "dependencies": {
+    "mermaid": "11.4.1",
+    "pagedjs": "0.4.3",
+    "playwright": "^1.49.0"
+  }
+}

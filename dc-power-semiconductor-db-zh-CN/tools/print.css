@@ -1,0 +1,348 @@
+/* Print stylesheet for the Simplified Chinese reference translation (A4, duplex-friendly). */
+
+:root {
+  --ink: #1c2430;
+  --muted: #5d6b7c;
+  --accent: #2f5f98;
+  --accent-dark: #173a63;
+  --rule: #c9d3df;
+  --zebra: #f4f7fa;
+  --head-bg: #e6eef7;
+  --serif: "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  --sans: "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  --mono: "Noto Sans Mono CJK SC", "DejaVu Sans Mono", monospace;
+}
+
+/* ---------------- Page geometry ---------------- */
+@page {
+  size: A4;
+  margin: 22mm 17mm 20mm 21mm;
+  @bottom-center {
+    content: counter(page);
+    font-family: var(--sans);
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+}
+@page :left {
+  margin-left: 17mm;
+  margin-right: 21mm;
+  @top-left {
+    content: "数据中心功率半导体数据库 · 简体中文参考译本";
+    font-family: var(--sans);
+    font-size: 7.5pt;
+    color: var(--muted);
+    vertical-align: bottom;
+    padding-bottom: 3mm;
+    border-bottom: 0.4pt solid var(--rule);
+  }
+}
+@page :right {
+  margin-left: 21mm;
+  margin-right: 17mm;
+  @top-right {
+    content: string(chaptitle);
+    font-family: var(--sans);
+    font-size: 7.5pt;
+    color: var(--muted);
+    vertical-align: bottom;
+    padding-bottom: 3mm;
+    border-bottom: 0.4pt solid var(--rule);
+  }
+}
+@page cover {
+  margin: 0;
+  @top-left { content: none; border: none; }
+  @top-right { content: none; border: none; }
+  @bottom-center { content: none; }
+}
+@page front {
+  @top-left { content: none; border: none; }
+  @top-right { content: none; border: none; }
+}
+
+/* ---------------- Base typography ---------------- */
+html { font-size: 9.6pt; }
+body {
+  font-family: var(--serif);
+  color: var(--ink);
+  line-height: 1.68;
+  text-align: justify;
+  orphans: 2;
+  widows: 2;
+  font-kerning: normal;
+}
+p { margin: 0 0 0.55em; }
+/* Paged.js justifies the last line of any element split across pages, and the property is
+   inherited; pin containers to left so only genuinely split paragraphs get justified. */
+section, div, ul, ol, li, table, thead, tbody, tr, th, td, blockquote, figure, h1, h2, h3, h4, pre {
+  text-align-last: left;
+}
+p { text-align-last: auto; }
+a { color: var(--accent-dark); text-decoration: none; }
+strong { font-family: var(--sans); font-weight: 700; }
+code {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  background: #eef2f6;
+  padding: 0 0.25em;
+  border-radius: 2px;
+  word-break: break-all;
+}
+ul, ol { margin: 0.2em 0 0.7em; padding-left: 1.5em; }
+li { margin: 0.12em 0; }
+
+h1, h2, h3, h4 {
+  font-family: var(--sans);
+  color: var(--accent-dark);
+  line-height: 1.35;
+  text-align: left;
+  break-after: avoid;
+}
+h2 {
+  font-size: 12.5pt;
+  margin: 1.25em 0 0.5em;
+  padding-bottom: 0.18em;
+  border-bottom: 0.8pt solid var(--rule);
+}
+h3 { font-size: 10.8pt; margin: 1em 0 0.4em; color: var(--accent); }
+h4 { font-size: 10pt; margin: 0.9em 0 0.35em; }
+
+/* ---------------- Cover ---------------- */
+section.cover {
+  page: cover;
+  break-after: page;
+  height: 297mm;
+  display: flex;
+  flex-direction: column;
+}
+.cover-band {
+  background: linear-gradient(160deg, #10294a 0%, #1d4677 55%, #2f5f98 100%);
+  color: #fff;
+  padding: 46mm 22mm 20mm;
+  height: 172mm;
+  box-sizing: border-box;
+}
+.cover-kicker {
+  font-family: var(--sans);
+  font-size: 11pt;
+  letter-spacing: 0.25em;
+  color: #b9d3ef;
+  margin-bottom: 8mm;
+}
+.cover-title {
+  font-family: var(--sans);
+  font-size: 31pt;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 3mm;
+  letter-spacing: 0.06em;
+  border: none;
+}
+.cover-sub {
+  font-family: var(--sans);
+  font-size: 13pt;
+  color: #d6e6f7;
+  letter-spacing: 0.04em;
+}
+.cover-edition {
+  display: inline-block;
+  margin-top: 9mm;
+  font-family: var(--sans);
+  font-size: 12pt;
+  padding: 1.5mm 5mm;
+  border: 1pt solid #9fc1e8;
+  border-radius: 2mm;
+  color: #fff;
+}
+.cover-chain { display: block; width: 100%; margin-top: 18mm; }
+.cover-body { padding: 16mm 22mm 0; flex: 1; }
+table.cover-facts {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 9.5pt;
+}
+table.cover-facts th {
+  width: 22mm;
+  text-align: left;
+  vertical-align: top;
+  color: var(--accent);
+  padding: 2.2mm 0;
+  border-bottom: 0.4pt solid var(--rule);
+}
+table.cover-facts td {
+  padding: 2.2mm 0;
+  border-bottom: 0.4pt solid var(--rule);
+  word-break: break-all;
+}
+.cover-disclaimer {
+  margin-top: 9mm;
+  font-family: var(--sans);
+  font-size: 8.5pt;
+  color: var(--muted);
+  line-height: 1.7;
+  border-left: 2pt solid var(--accent);
+  padding-left: 4mm;
+}
+
+/* ---------------- Front matter ---------------- */
+section.notice, section.toc { page: front; break-after: page; }
+.notice-heading, .toc-heading {
+  font-size: 17pt;
+  border: none;
+  margin: 4mm 0 7mm;
+  letter-spacing: 0.1em;
+}
+table.legend { width: 100%; margin: 4mm 0 6mm; }
+
+section.toc ol { list-style: none; padding: 0; margin: 0; font-family: var(--sans); text-align: left; }
+section.toc li { margin: 0; break-inside: avoid; }
+section.toc a {
+  display: flex;
+  align-items: baseline;
+  color: var(--ink);
+  padding: 1.55mm 0;
+  border-bottom: 0.3pt solid #e3e9f0;
+}
+section.toc .toc-no {
+  flex: 0 0 13mm;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 9.5pt;
+}
+section.toc .toc-title { flex: 0 1 auto; font-size: 10pt; }
+section.toc .toc-dots {
+  flex: 1 1 auto;
+  border-bottom: 0.8pt dotted #9aa8b8;
+  margin: 0 2mm 1.1mm;
+  min-width: 8mm;
+}
+section.toc a::after {
+  content: target-counter(attr(href), page);
+  flex: 0 0 auto;
+  font-size: 9.5pt;
+  color: var(--muted);
+}
+section.toc li.toc-aux .toc-title { font-style: normal; color: var(--accent-dark); }
+
+/* ---------------- Chapters ---------------- */
+section.chapter { break-before: page; }
+section.chapter h1 {
+  string-set: chaptitle content(text);
+  font-size: 19pt;
+  margin: 0 0 3mm;
+  padding: 0 0 3mm;
+  border-bottom: 2pt solid var(--accent);
+  display: flex;
+  align-items: baseline;
+  gap: 4mm;
+}
+.chap-no {
+  display: inline-block;
+  font-size: 11pt;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 1.2mm;
+  padding: 0.6mm 2.4mm;
+  min-width: 7mm;
+  text-align: center;
+  position: relative;
+  top: -0.8mm;
+}
+blockquote.meta {
+  margin: 0 0 5mm;
+  padding: 2mm 3.5mm;
+  background: var(--zebra);
+  border-left: 2.5pt solid var(--accent);
+  font-family: var(--sans);
+  font-size: 8.2pt;
+  color: var(--muted);
+}
+blockquote.meta p { margin: 0; line-height: 1.75; }
+blockquote.meta strong { color: var(--accent-dark); }
+
+blockquote {
+  margin: 0.8em 0;
+  padding: 2mm 3.5mm;
+  border-left: 2.5pt solid var(--rule);
+  background: #fafbfc;
+  font-size: 0.95em;
+  break-inside: avoid;
+}
+blockquote.note.warn { border-left-color: #c98a1b; background: #fdf7ec; }
+blockquote.note.refresh { border-left-color: #3d8a63; background: #eff8f3; }
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------------- Tables ---------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.6em 0 1em;
+  font-family: var(--sans);
+  font-size: 7.9pt;
+  line-height: 1.45;
+  text-align: left;
+}
+th, td, li, pre, pre code { text-align: left; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th {
+  background: var(--head-bg);
+  color: var(--accent-dark);
+  font-weight: 700;
+  border-top: 0.9pt solid var(--accent);
+  border-bottom: 0.6pt solid var(--accent);
+  padding: 1.3mm 1.6mm;
+  vertical-align: bottom;
+}
+td {
+  padding: 1.1mm 1.6mm;
+  border-bottom: 0.35pt solid var(--rule);
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+tbody tr:nth-child(even) td { background: var(--zebra); }
+table.wide { font-size: 7.1pt; }
+table.wide th, table.wide td { padding: 0.9mm 1.1mm; }
+table.xwide { font-size: 6.3pt; }
+table.xwide th, table.xwide td { padding: 0.8mm 0.8mm; }
+td a, li a { overflow-wrap: anywhere; word-break: break-all; }
+
+/* ---------------- Diagrams ---------------- */
+figure.diagram {
+  margin: 0.8em 0 1.1em;
+  padding: 3mm 2mm;
+  border: 0.5pt solid var(--rule);
+  border-radius: 1.5mm;
+  background: #fbfcfe;
+  break-inside: avoid;
+  text-align: center;
+}
+figure.diagram pre.mermaid {
+  margin: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  white-space: normal;
+  font-family: var(--sans);
+}
+figure.diagram svg { display: block; margin: 0 auto; }
+
+/* ---------------- Code blocks ---------------- */
+pre {
+  font-family: var(--mono);
+  font-size: 7.4pt;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f5f7f9;
+  border: 0.5pt solid var(--rule);
+  border-radius: 1.5mm;
+  padding: 3mm 3.5mm;
+  margin: 0.7em 0 1em;
+  text-align: left;
+}
+pre code { background: none; padding: 0; font-size: 1em; word-break: normal; }
+
+hr { border: none; border-top: 0.5pt solid var(--rule); margin: 1.2em 0; }
