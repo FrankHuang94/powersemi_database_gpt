@@ -234,9 +234,6 @@ section.chapter h1 {
   margin: 0 0 3mm;
   padding: 0 0 3mm;
   border-bottom: 2pt solid var(--accent);
-  display: flex;
-  align-items: baseline;
-  gap: 4mm;
 }
 .chap-no {
   display: inline-block;
@@ -247,8 +244,8 @@ section.chapter h1 {
   padding: 0.6mm 2.4mm;
   min-width: 7mm;
   text-align: center;
-  position: relative;
-  top: -0.8mm;
+  margin-right: 2.2mm;
+  vertical-align: 0.18em;
 }
 blockquote.meta {
   margin: 0 0 5mm;

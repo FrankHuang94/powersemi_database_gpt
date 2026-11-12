@@ -239,6 +239,9 @@
 | Cisco | 思科 |
 | Rittal | 威图（Rittal） |
 | Megmeet | 麦格米特 |
+| Celestica / Quanta / Luxshare | 天弘（Celestica）/ 广达（Quanta）/ 立讯精密（Luxshare） |
+| Resonac / Sumitomo Metal Mining | 力森诺科（Resonac）/ 住友金属矿山（Sumitomo Metal Mining） |
+| PSMC / TrendForce | 力积电（PSMC）/ 集邦咨询（TrendForce） |
 | Reinhausen | 莱茵豪森（Reinhausen） |
 | SOLUM | SOLUM（保留英文） |
 | Heron Power / Amperesand / DG Matrix / Claros / Ferric / C2i Semiconductors | 保留英文 |

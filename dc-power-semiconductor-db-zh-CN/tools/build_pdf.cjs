@@ -110,7 +110,7 @@ function mdToHtml(file, chapter) {
   html = html.replace(/<blockquote>\s*<p>🔄/g, '<blockquote class="note refresh"><p>🔄');
 
   // Chapter number badge in the H1.
-  html = html.replace(/<h1([^>]*)>/, `<h1$1><span class="chap-no">${escapeHtml(chapter.label)}</span>`);
+  html = html.replace(/<h1([^>]*)>/, `<h1$1><span class="chap-no">${escapeHtml(chapter.label)}</span> `);
   return { html, meta: readMeta(src) };
 }
 
@@ -245,7 +245,7 @@ ${body}
       const svg = el.querySelector('svg');
       const vb = svg && svg.viewBox && svg.viewBox.baseVal;
       const src = el.dataset.src || '';
-      if (vb && vb.width && (170 * mmPx) / vb.width < 0.75 && /^\s*(flowchart|graph)\s+LR/.test(src)) {
+      if (vb && vb.width && (160 * mmPx) / vb.width < 0.72 && /^\s*(flowchart|graph)\s+LR/.test(src)) {
         el.removeAttribute('data-processed');
         el.innerHTML = '';
         el.textContent = src.replace(/^(\s*(?:flowchart|graph))\s+LR/, '$1 TB');
@@ -256,7 +256,7 @@ ${body}
 
     // Fit each diagram into the text block without upscaling small diagrams.
     const mm = 96 / 25.4;
-    const maxW = 170 * mm, maxH = 105 * mm;
+    const maxW = 160 * mm, maxH = 105 * mm;
     document.querySelectorAll('figure.diagram svg').forEach((svg) => {
       const vb = svg.viewBox && svg.viewBox.baseVal;
       if (!vb || !vb.width) return;
