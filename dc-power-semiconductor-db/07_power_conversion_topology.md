@@ -1,5 +1,5 @@
 # Power Conversion Topology
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** topology, PFC, LLC, DAB, multiphase, switched-capacitor
 
@@ -18,6 +18,14 @@ Bidirectional CLLC and DAB stages support BBUs, UPS, and future HVDC architectur
 - [CONFIRMED] Multiphase operation shares current and cancels ripple at the output.
 - [CONFIRMED] DAB provides isolated bidirectional power using two active bridges.
 - [ESTIMATED] Hybrid switched-capacitor/inductor designs gain value as conversion ratios rise.
+- [CONFIRMED, 2026] Medium-voltage solid-state transformers (MV AC-to-800 VDC) moved from
+  concept to product programs: ABB Infinitus (SST commercial availability 2H 2027), Eaton
+  MVSST 2.0 with Infineon SiC, Siemens/Reinhausen (up to 36 kV input), Delta, Heron Power,
+  Amperesand, and DG Matrix [Sources: vendor releases, 2026].
+- [CONFIRMED, 2026-10] Single-stage node conversion from 800 V directly to 12 V or 6 V was
+  demonstrated with stacked GaN half-bridges and high-ratio resonant stages (Navitas/NVIDIA
+  24 kW 800 V-to-12 V; Microchip/Navitas and TI 800 V-to-6 V). Efficiency values are vendor
+  targets until independent measurements are published.
 
 ## Visual Guide
 ```mermaid
@@ -74,6 +82,9 @@ controller bandwidth.
 | CLLC | Bidirectional resonant conversion | Wide-gain control |
 | Partial-power processing | Process only voltage difference | Protection/fault paths |
 | Modular multilevel | Scale voltage with cells | Cost/control complexity |
+| MV solid-state transformer | MV AC (13.8-36 kV) to 800 VDC, often with storage buffering | Certification, fault ride-through, MV insulation, cost per MW |
+| Stacked-half-bridge GaN LLC | 800 V to 12 V/6 V single stage near the node | Voltage balancing, transformer ratio, transient response |
+| Multi-port SST | MV AC, storage, and generation ports into one DC bus | Control complexity and protection coordination |
 
 Related: [Master Index](README.md).
 
@@ -85,13 +96,24 @@ Related: [Master Index](README.md).
 | Phase spacing | 360/N degrees | Topology identity | 2026 |
 | DAB directionality | Bidirectional | Power-electronics literature | 2025 |
 | LLC switching | ZVS/ZCS over designed range | Power-electronics literature | 2025 |
+| Navitas/NVIDIA single-stage board | 24 kW, 800 V-to-12 V, 16 × 650 V GaN, 97% full-load target | Navitas | 2026-10-13 |
+| TI 800 V-to-6 V bus converter | 97.6% peak [VENDOR CLAIM], >2,000 W/in³ | TI | 2026-03-16 |
+| Delta MV SST | Up to 98.5% [VENDOR CLAIM, trade press] | Delta/OCP coverage | 2026-10 |
+| DG Matrix Interport | Multi-port SST up to 2.4 MW per unit | DG Matrix | 2026-02 |
 
 ## Open Questions / Gaps
 - Add apples-to-apples 5 kW and 30 kW loss models across PFC/LLC variants.
 - Map proprietary Vicor claims to independently measured efficiency and transient data.
 - Track OCP high-power shelf reference topologies.
+- Compare MV SST efficiency, footprint, and cost per MW against line-frequency transformer plus rectifier baselines.
 
 ## References
 - IEEE Transactions on Power Electronics | https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=63 | Accessed 2026-06-10
 - TI totem-pole PFC resources | https://www.ti.com/power-management/acdc-isolated-dcdc-switching-regulators/power-factor-correction-pfc/overview.html | Accessed 2026-06-10
 - Vicor Factorized Power | https://www.vicorpower.com/technology/factorized-power-architecture | Accessed 2026-06-10
+- ABB Infinitus DC portfolio | https://www.globenewswire.com/news-release/2026/09/21/3365178/0/en/abb-s-new-direct-current-portfolio-aims-to-rewire-ai-data-center-energy-infrastructure.html | Indexed 2026-11-12
+- Siemens/Reinhausen SST | https://www.techzine.eu/news/infrastructure/143672/siemens-and-reinhausen-are-developing-an-sst-for-800v-dc-ai-data-centers/ | Indexed 2026-11-12
+- Infineon/Eaton MVSST 2.0 | https://www.infineon.com/press-release/2026/infpr202609-146 | Indexed 2026-11-12
+- Navitas/NVIDIA 24 kW board | https://www.powerelectronicsnews.com/navitas-nvidia-develop-24-kw-800v-to-12v-power-board/ | Indexed 2026-11-12
+- Microchip/Navitas 800 V-to-6 V reference design | https://www.microchip.com/en-us/about/news-releases/products/the-data-center-is-moving-to-800v-microchip-and-navitas-are-enabling-transition | Indexed 2026-11-12
+- DG Matrix Series A | https://techcrunch.com/2026/02/18/dg-matrix-raises-60m-to-make-data-center-power-smarter | Indexed 2026-11-12

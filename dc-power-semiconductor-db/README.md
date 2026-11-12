@@ -1,5 +1,5 @@
 # Datacenter Power Semiconductor Database
-> **Last Updated:** 2026-07-28
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** index, datacenter, power-semiconductors, AI-infrastructure
 
@@ -24,38 +24,45 @@ as audited facts.
   MW-scale AI racks, with production deployment beginning with Kyber systems in 2027.
 - [CONFIRMED, 2026] July updates include Infineon's Dresden Smart Power Fab opening,
   Infineon/LS ELECTRIC DC-infrastructure collaboration, and new GaN/SiC litigation milestones.
+- [CONFIRMED, 2026-11] November updates: OCP Mt. Diablo v1.0.0 (±400 VDC) and the OCP SST
+  specification; NVIDIA's staged 800 VDC rollout (sidecar racks 2H 2026, row power centers 2027);
+  Vera Rubin NVL72 shipping; Infineon FY2026 datacenter-power revenue (~€2.2B) and FY2027 guidance
+  (~€4B); the processor-power M&A wave (Empower, Claros, C2i, Ferric); Vicor's ITC case
+  337-TA-1526; and a revised market model (~$9B 2026E, superseding ~$4B).
+- [CONFIRMED, 2026-11] A Simplified Chinese reference translation and a print-ready PDF are
+  available in [`../dc-power-semiconductor-db-zh-CN/`](../dc-power-semiconductor-db-zh-CN/README.md).
 
 ## Detailed Content
 ### Quick Access
 
 | Section | File | Status | Last Updated |
 |---|---|---:|---:|
-| Executive summary | [00](00_executive_summary.md) | Draft | 2026-07-28 |
+| Executive summary | [00](00_executive_summary.md) | Draft | 2026-11-12 |
 | Technology overview and glossary | [01](01_technology_overview.md) | Draft | 2026-06-30 |
-| Architecture roadmap | [02](02_power_architecture_roadmap.md) | Draft | 2026-07-28 |
-| Wide-bandgap overview | [03](03_wide_bandgap_semiconductors.md) | Draft | 2026-06-30 |
-| GaN technology | [04](04_gan_technology.md) | Draft | 2026-07-28 |
-| SiC technology | [05](05_sic_technology.md) | Draft | 2026-07-28 |
-| Silicon devices | [06](06_silicon_power_devices.md) | Draft | 2026-06-30 |
-| Conversion topology | [07](07_power_conversion_topology.md) | Draft | 2026-06-30 |
-| VRM and PMIC | [08](08_vrm_and_pmic.md) | Draft | 2026-06-30 |
-| Digital power | [09](09_digital_power_management.md) | Draft | 2026-06-30 |
-| Distribution architecture | [10](10_power_distribution_architecture.md) | Draft | 2026-07-28 |
-| Integrated vendors | [11](11_vendors_integrated.md) | Draft | 2026-07-28 |
-| Discrete vendors | [12](12_vendors_discrete.md) | Draft | 2026-07-28 |
-| Module/system vendors | [13](13_vendors_modules_and_systems.md) | Draft | 2026-07-28 |
-| Startup watchlist | [14](14_startups_watchlist.md) | Draft | 2026-07-28 |
-| Hyperscaler strategies | [15](15_hyperscaler_power_strategy.md) | Draft | 2026-07-28 |
-| Patents and IP | [16](16_patents_ip_landscape.md) | Draft | 2026-07-28 |
-| Research papers | [17](17_key_research_papers.md) | Draft | 2026-06-30 |
-| Supply chain | [18](18_production_ramp_supply_chain.md) | Draft | 2026-07-28 |
-| Competition | [19](19_competitive_landscape.md) | Draft | 2026-07-28 |
-| Market sizing | [20](20_market_sizing.md) | Draft | 2026-07-28 |
-| Thermal management | [21](21_thermal_management.md) | Draft | 2026-06-30 |
-| Power integrity | [22](22_power_integrity_and_signal.md) | Draft | 2026-06-30 |
-| Standards | [23](23_standards_and_regulatory.md) | Draft | 2026-07-28 |
-| Sustainability | [24](24_sustainability_and_efficiency.md) | Draft | 2026-06-30 |
-| Investment/M&A | [25](25_investment_and_ma_tracker.md) | Draft | 2026-07-28 |
+| Architecture roadmap | [02](02_power_architecture_roadmap.md) | Draft | 2026-11-12 |
+| Wide-bandgap overview | [03](03_wide_bandgap_semiconductors.md) | Draft | 2026-11-12 |
+| GaN technology | [04](04_gan_technology.md) | Draft | 2026-11-12 |
+| SiC technology | [05](05_sic_technology.md) | Draft | 2026-11-12 |
+| Silicon devices | [06](06_silicon_power_devices.md) | Draft | 2026-11-12 |
+| Conversion topology | [07](07_power_conversion_topology.md) | Draft | 2026-11-12 |
+| VRM and PMIC | [08](08_vrm_and_pmic.md) | Draft | 2026-11-12 |
+| Digital power | [09](09_digital_power_management.md) | Draft | 2026-11-12 |
+| Distribution architecture | [10](10_power_distribution_architecture.md) | Draft | 2026-11-12 |
+| Integrated vendors | [11](11_vendors_integrated.md) | Draft | 2026-11-12 |
+| Discrete vendors | [12](12_vendors_discrete.md) | Draft | 2026-11-12 |
+| Module/system vendors | [13](13_vendors_modules_and_systems.md) | Draft | 2026-11-12 |
+| Startup watchlist | [14](14_startups_watchlist.md) | Draft | 2026-11-12 |
+| Hyperscaler strategies | [15](15_hyperscaler_power_strategy.md) | Draft | 2026-11-12 |
+| Patents and IP | [16](16_patents_ip_landscape.md) | Draft | 2026-11-12 |
+| Research papers | [17](17_key_research_papers.md) | Draft | 2026-11-12 |
+| Supply chain | [18](18_production_ramp_supply_chain.md) | Draft | 2026-11-12 |
+| Competition | [19](19_competitive_landscape.md) | Draft | 2026-11-12 |
+| Market sizing | [20](20_market_sizing.md) | Draft | 2026-11-12 |
+| Thermal management | [21](21_thermal_management.md) | Draft | 2026-11-12 |
+| Power integrity | [22](22_power_integrity_and_signal.md) | Draft | 2026-11-12 |
+| Standards | [23](23_standards_and_regulatory.md) | Draft | 2026-11-12 |
+| Sustainability | [24](24_sustainability_and_efficiency.md) | Draft | 2026-11-12 |
+| Investment/M&A | [25](25_investment_and_ma_tracker.md) | Draft | 2026-11-12 |
 
 ### Visual Navigation
 Every numbered section now includes a `Visual Guide` with GitHub-rendered Mermaid diagrams. The diagrams are self-authored summaries of the conversion chain, roadmap, device choices, vendor ecosystem, and investment logic, so they can be reviewed and versioned as text.
@@ -97,6 +104,18 @@ Vendor diagrams, product photos, reference designs, investor-presentation figure
 3. Treat `[RUMORED]` as unverified industry reporting, never as a purchasing or investment fact.
 4. Preserve the statistic's year/quarter and currency basis when editing.
 5. Add a dated reference and update the file header for every material revision.
+6. Reference lines marked `Accessed` were opened directly on that date. Lines marked `Indexed`
+   (2026-11-12 refresh) were located and checked through search-engine indexes because direct
+   page retrieval was blocked in the refresh environment; spot-check the linked primary document
+   before investment or purchasing use.
+
+### Simplified Chinese Reference Translation
+
+A full Simplified Chinese translation of this database, synchronized to the 2026-11-12 version,
+is kept in [`../dc-power-semiconductor-db-zh-CN/`](../dc-power-semiconductor-db-zh-CN/README.md)
+for reference only. The English files remain authoritative. The folder also contains a
+print-ready A4 PDF (`dc-power-semiconductor-db-zh-CN.pdf`), the terminology glossary
+(`TRANSLATION_NOTES.md`), and the PDF build script (`tools/`).
 
 ### Reusable Database Refresh Prompt
 
@@ -199,20 +218,29 @@ Scope covers utility-to-chip conversion, distribution, management, and control. 
 | Primary focus | AI/HPC datacenter power | Project scope | 2026-06-10 |
 | Default currency | USD | Database convention | 2026-06-10 |
 | Forecast horizon | 2030 | Project scope | 2026-06-10 |
+| Latest refresh | 2026-11-12 | Refresh log | 2026-11-12 |
+| Translations | Simplified Chinese (reference only) | ../dc-power-semiconductor-db-zh-CN/ | 2026-11-12 |
 
 ## Open Questions / Gaps
 - Add machine-readable CSV/JSON mirrors for frequently refreshed market and financial tables.
 - Add archived source snapshots where licensing permits.
 - Reconcile vendor naming after acquisitions and divestitures on every quarterly refresh.
+- Re-open `Indexed` sources directly once network access allows, and upgrade or correct figures.
+- Cover items skipped in 2026-11 due to search limits: Renesas, ROHM, Microchip, NXP, Vishay,
+  Flex, Murata, Advanced Energy, EU EED rating scheme, China PUE policy, US large-load
+  interconnection rules, and AWS/Oracle/OpenAI/xAI power architectures.
 
 ## Refresh Log
 
 | Date | Scope | Material additions |
 |---|---|---|
 | 2026-07-28 | Quarterly high-change sections | NVIDIA 800 VDC/Kyber roadmap; July 2026 Infineon manufacturing, collaboration, and GaN-IP events; Wolfspeed/Navitas litigation; vendor FY2025/FY2026 financial baselines; onsemi GaN roadmap; SST startup coverage |
+| 2026-11-12 | All sections except 01 | OCP Mt. Diablo v1.0.0, SST v0.3, and Grid Resilience specs; NVIDIA 800 VDC staging, Vera Rubin shipping, DSX POD; OCP 2026 800 VDC hardware (Delta, LITEON, Vertiv, Schneider, ABB, Siemens/Reinhausen, Eaton/Infineon); Q3 2026 / FY2026 results (Infineon, TI, ADI, ST, onsemi, MPS, Vicor, Vertiv, Eaton, Delta, LITEON, Navitas, Wolfspeed, Power Integrations, Innoscience, SICC); M&A (ADI/Empower, Navitas/Claros, Infineon/C2i, onsemi/Ferric, Vertiv/UIG, Eaton/COL, Eaton/Boyd); litigation (Vicor ITC 337-TA-1526, Renesas/Navitas, Innoscience China rulings, EPC/Innoscience); SiC pricing and 300 mm samples; Wolfspeed OSC loan; startup funding (Heron, DG Matrix, Vertical Semiconductor); Yole/Dell'Oro/TrendForce forecasts; LBNL/IEA/Google energy data; market model revised to ~$9B 2026E; Simplified Chinese translation and PDF added |
 
 ## References
 - Open Compute Project | https://www.opencompute.org/ | Accessed 2026-06-10
 - PMBus | https://pmbus.org/ | Accessed 2026-06-10
 - IEEE Power Electronics Society | https://www.ieee-pels.org/ | Accessed 2026-06-10
 - NVIDIA 800 VDC architecture | https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/ | Accessed 2026-07-28
+- NVIDIA 800 VDC rollout blog | https://blogs.nvidia.com/blog/800-vdc-power-architecture-ai-factory/ | Indexed 2026-11-12
+- OCP Mt. Diablo v1.0.0 | https://www.opencompute.org/wp-content/uploads/2026/10/OCP-Specification-Mt.-Diablo-Disaggregated-Power-Rack-Specification-v1.0.0.pdf | Indexed 2026-11-12

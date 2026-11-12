@@ -1,5 +1,5 @@
 # Key Research Papers
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** papers, bibliography, IEEE, APEC, reliability
 
@@ -17,6 +17,12 @@ application evidence but should not replace independent reliability or efficienc
 - [CONFIRMED] SiC gate-oxide/interface reliability remains heavily researched.
 - [CONFIRMED] 48 V-to-POL research includes switched-tank and hybrid converters.
 - [CONFIRMED] HVDC studies must specify architecture boundaries to compare efficiency.
+- [CONFIRMED, 2026] ISPSD 2026 (Las Vegas, 2026-05-24 to 28) included a dedicated vertical-GaN
+  session; IEDM 2026 (San Francisco, 2026-12-12 to 16) explicitly lists datacenter power
+  conversion in its power and analog track.
+- [CONFIRMED, 2026] Notable 2026 device results include a 2,334 V AlGaN-on-sapphire HEMT and a
+  vertical GaN-on-GaN trench MOSFET with 1.46 mΩ·cm² specific on-resistance; both are
+  research results, not products.
 
 ## Visual Guide
 ```mermaid
@@ -57,6 +63,8 @@ flowchart LR
 | HVDC | DC distribution in data centers | multiple | 2010s | ECCE/TPEL | Gains depend on stage boundary/load | https://ieeexplore.ieee.org/ |
 | AI optimization | Data center cooling/power ML control | Google/DeepMind | 2016+ | Applied reports | ML can optimize supervisory controls | https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/ |
 | Ga2O3 | Ultra-wide-bandgap beta-Ga2O3 reviews | Higashiwaki et al. | 2010s | APL/IEEE | High field, poor thermal conductivity | https://doi.org/10.1063/1.5059067 |
+| Lateral GaN HV | AlGaN-on-sapphire HEMT with 2,334 V breakdown | UW-Madison group | 2026 | Appl. Phys. Express 19, 066502 | Sapphire substrates extend lateral GaN voltage | https://compoundsemiconductor.net/article/125373/A_new_benchmark_for_AlGaN-on-sapphire_HEMTs |
+| Vertical GaN | Vertical GaN-on-GaN trench MOSFET, 1.46 mΩ·cm², BFOM 438 MW/cm² | SCUT/HKUST | 2026 | Applied Physics Letters | Vertical GaN progress for 800 V-class conversion | https://ptc.home.ece.ust.hk/Papers/2026/Xuancong%20APL%202026.pdf |
 
 ### Venue Watchlist
 
@@ -70,6 +78,16 @@ flowchart LR
 | IEEE TPEL | Continuous | Converter research |
 | IEEE TED | Continuous | Device physics/reliability |
 | PCIM Europe | Annual | Commercial devices/systems |
+| ICSCRM | Biennial | SiC materials/devices (2026: Yokohama, 2026-09-27 to 10-02) |
+| OCP Global Summit | Annual | Rack/facility power specifications (2026: 2026-10-12 to 15) |
+
+| 2026 event | Dates | Datacenter-power relevance |
+|---|---|---|
+| ISPSD 2026 | 2026-05-24 to 28, Las Vegas | Vertical GaN session; SiC gate reliability |
+| ECCE Europe 2026 | 2026-09-14 to 18, Valencia | Converter/system research |
+| ICSCRM 2026 | 2026-09-27 to 10-02, Yokohama | 200/300 mm SiC, thick epitaxy |
+| ECCE 2026 | 2026-10-04 to 08, Vancouver | Topologies and control |
+| IEDM 2026 | 2026-12-12 to 16, San Francisco | Power/analog track covers datacenter power conversion [UPCOMING] |
 
 > 🔄 Refresh Needed: Add exact article titles, authors, DOI, and open-access links from a
 bibliographic database; the current rows are search anchors where metadata is incomplete.
@@ -94,6 +112,9 @@ Related: [Master Index](README.md).
 ## References
 - IEEE Xplore | https://ieeexplore.ieee.org/ | Accessed 2026-06-10
 - APEC | https://apec-conf.org/ | Accessed 2026-06-10
-- ISPSD | https://ispsd2026.com/ | Accessed 2026-06-10
+- ISPSD | https://ispsd2026.com/ | Accessed 2026-06-10 [TO VERIFY: URL not reconfirmed in 2026-11 refresh]
+- ISPSD 2026 session index | https://epapers2.org/ispsd2026/ESR/session_index.php | Indexed 2026-11-12
+- IEDM 2026 call for papers | https://ieee-iedm.org/wp-content/uploads/2026/07/IEDM-2026-Call-for-Papers-FINAL.pdf | Indexed 2026-11-12
+- ICSCRM 2026 | https://www.iisb.fraunhofer.de/en/events/2026/2026-09-27-to-10-02-icscrm-2026.html | Indexed 2026-11-12
 - PCIM Europe | https://pcim.mesago.com/ | Accessed 2026-06-10
 - JEDEC JEP173 | https://www.jedec.org/standards-documents/docs/jep173 | Accessed 2026-06-10

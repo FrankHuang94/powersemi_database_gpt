@@ -1,5 +1,5 @@
 # Competitive Landscape
-> **Last Updated:** 2026-07-28
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** competition, Porter, margins, positioning, M&A
 
@@ -19,11 +19,18 @@ suppliers.
 - [ESTIMATED] SiC oversupply reduces substrate/device pricing power through the mid-2020s.
 - [CONFIRMED] Recent M&A consolidated GaN and SiC specialists into larger portfolios.
 - [CONFIRMED, 2026] Public financial disclosures sharpen the AI-power comparison: Infineon
-  targets ~€1.5B FY2026 AI-power revenue; onsemi reported >$250M FY2025 AI-datacenter revenue;
-  MPS reported $1.434B combined storage/computing and enterprise-data revenue, which is not a
-  pure AI-power measure.
-- [CONFIRMED, 2026-07] GaN/SiC IP enforcement intensified through final Infineon/Innoscience
-  US remedies and Wolfspeed's unresolved suit against Navitas.
+  reported ~€1.7B FY2026 AI-power and ~€2.2B total datacenter-power revenue (FY2027 DC power
+  guided close to €4B); onsemi expects ~$620M 2026 AI-datacenter revenue; MPS Enterprise Data
+  reached $506.7M in Q3 2026 alone; TI said data center was ~13% of Q3 2026 revenue. Categories
+  differ and are not pure AI-power measures.
+- [CONFIRMED, 2026] Processor-level power is consolidating: ADI/Empower, Navitas/Claros,
+  Infineon/C2i, and onsemi/Ferric (pending) moved IVR and controller IP into larger portfolios
+  within six months, while Vertiv (UtilityInnovation Group) and Eaton (Boyd Thermal, COL Group)
+  bought scale in facility power and thermal.
+- [CONFIRMED, 2026] IP enforcement broadened from GaN/SiC devices to architecture: Vicor's ITC case
+  (337-TA-1526) names Delta, Infineon, MPS, Flex, Celestica, Quanta, and Luxshare entities, and
+  royalties were ~34% of Vicor's Q3 2026 revenue. Device disputes also multiplied
+  (Infineon/Innoscience in the US, Germany, and China; Wolfspeed v. Navitas; Renesas/Navitas).
 
 ## Visual Guide
 ```mermaid
@@ -86,7 +93,8 @@ flowchart TB
 | MPS | High est. | limited device WBG | High | High | Low | Integrated challenger |
 | Wolfspeed | Low DC today est. | SiC | Low | Medium | Low | Upstream option |
 | Navitas | Low today/high target | GaN+SiC | Medium | Low | Low | Challenger |
-| Vicor | High | device-agnostic modules | Low | Very high | Low | Architecture specialist |
+| Vicor | High | device-agnostic modules | Low | Very high | Low | Architecture specialist; licensing/ITC enforcement |
+| onsemi | Medium est. (~$620M 2026E AI DC) | SiC+GaN | Medium; IVR via Ferric (pending) | Medium | Low | High-voltage IDM entering VR |
 | Delta/Vertiv | High | sourced | Low | High | Very high | System integrators |
 
 > ⚠️ Note: Infineon, onsemi, and MPS use different reporting categories. AI power,
@@ -107,6 +115,13 @@ be used to calculate share without a product-level bridge.
 | 2017 | ADI | Linear Technology | ~$14.8B | Power/analog | Major PMIC consolidation |
 | 2017 | Renesas | Intersil | ~$3.2B | Power management | Server VR strength |
 | 2016 | onsemi | Fairchild | ~$2.4B | Power discretes | Scale |
+| 2026 | onsemi | Ferric (announced 2026-11-02) | $600M + up to $175M contingent | IVR/magnetics | Processor-level power |
+| 2026 | Navitas | Claros (closed 2026-10-06) | Up to ~$232.8M | IVR/vertical delivery | Grid-to-XPU portfolio |
+| 2026 | Infineon | C2i Semiconductors (closed ~2026-10) | Undisclosed | Multiphase controllers/stages | AI VR control |
+| 2026 | Vertiv | UtilityInnovation Group (closed 2026-10-27) | ~$1.45B + up to $1.15B earn-out | On-site power/microgrids | Time-to-power |
+| 2026 | Eaton | COL Group (announced 2026-09-24) | EV €810M | MV switchgear | Facility power |
+| 2026 | ADI | Empower Semiconductor (closed 2026-07-07) | ~$1.5B | IVR/silicon capacitors | Processor-level power |
+| 2026 | Eaton | Boyd Thermal (closed 2026-03-12) | $9.5B | Liquid cooling | Thermal/power co-design |
 
 Related: [Master Index](README.md).
 
@@ -118,12 +133,16 @@ Related: [Master Index](README.md).
 | ADI/Maxim | ~$20.8B announced | ADI | 2020/2021 close |
 | Renesas/Dialog | EUR4.9B equity value | Renesas | 2021 |
 | onsemi/Fairchild | ~$2.4B | onsemi | 2016 |
+| ADI/Empower | ~$1.5B | ADI | 2026 |
+| onsemi/Ferric | Up to $775M | onsemi | 2026 (pending) |
+| Vicor royalty share | ~34% of Q3 2026 revenue | Vicor | 2026-10-20 |
 
 ## Open Questions / Gaps
 - Replace company-level margin ranges with segment-level economics.
 - Quantify DC revenue exposure using disclosed end-market and product data.
 - Add design-win churn and qualification cycle length by layer.
 - Model merchant silicon displacement under custom hyperscaler control ICs.
+- Assess the competitive effect of 337-TA-1526 on VPD module sourcing.
 
 ## References
 - Company transaction announcements | respective investor-relations sites | Accessed 2026-06-10
@@ -134,3 +153,9 @@ Related: [Master Index](README.md).
 - MPS 2025 Form 10-K | https://media.monolithicpower.com/mps_cms_document/2/0/2025_form_10-k_final.pdf | Accessed 2026-07-28
 - Infineon US ITC final determination | https://www.infineon.com/press-release/2026/ifxpr202607-118 | Accessed 2026-07-28
 - Wolfspeed v. Navitas announcement | https://www.wolfspeed.com/company/news-events/news/wolfspeed-files-patent-infringement-lawsuit-against-navitas-semiconductor/ | Accessed 2026-07-28
+- Infineon FY2026 call highlights | https://www.gurufocus.com/news/9193285/infineon-technologies-ag-ifnnf-q4-2026-earnings-call-highlights-record-revenue-ai-power-surge-and-a-20-billion-fy2027-outlook | Indexed 2026-11-12
+- USITC 337-TA-1526 | https://www.usitc.gov/press_room/news_release/2026/er1009_69342.htm | Indexed 2026-11-12
+- Vicor Q3 2026 results | https://www.sec.gov/Archives/edgar/data/0000751978/000119312526425697/d153882dex991.htm | Indexed 2026-11-12
+- Vertiv completes UIG acquisition | https://www.vertiv.com/en-us/about/news-and-events/corporate-news/2026/vertiv-completes-acquisition-of-utilityinnovation-group/ | Indexed 2026-11-12
+- Eaton/Boyd Thermal completion | https://www.businesswire.com/news/home/20260312582488/en | Indexed 2026-11-12
+- ADI completes Empower acquisition | https://www.analog.com/en/newsroom/press-releases/2026/7-7-26-adi-completes-acquisition-of-empower-semiconductor.html | Indexed 2026-11-12

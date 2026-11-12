@@ -1,5 +1,5 @@
 # Silicon Power Devices
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** silicon, MOSFET, IGBT, diode, DrMOS
 
@@ -18,6 +18,11 @@ thin wafers, copper clip packaging, source-down layouts, and integration.
 - [CONFIRMED] Super-junction MOSFETs remain competitive in 600-700 V server PSUs.
 - [CONFIRMED] IGBTs remain used in high-power, lower-frequency UPS/inverter stages.
 - [ESTIMATED] Silicon remains cost-competitive at 12/48 V below roughly 300-500 kHz, design-dependent.
+- [CONFIRMED, 2026-11] onsemi reported volume shipments of silicon and SiC MOSFETs into multiple
+  AI platforms including Google, covering PSUs and 54 V-to-12 V conversion; silicon remains
+  the incumbent in 54 V intermediate-bus stages [Source: onsemi Q3 2026 results, 2026-11-02].
+- [CONFIRMED, 2026-07-07] onsemi agreed to divest its Tarlac (Philippines) and Mountain Top
+  (Pennsylvania) sites under its "fab right" strategy; closing timing is [TO VERIFY].
 
 ## Visual Guide
 ```mermaid
@@ -84,6 +89,7 @@ See [08_vrm_and_pmic.md](08_vrm_and_pmic.md).
 
 ## Open Questions / Gaps
 - Source datacenter-only MOSFET shipment and revenue shares.
+- Track whether 800 V-to-12/6 V GaN node converters displace silicon in 54 V intermediate-bus stages.
 - Compare package-level FOM and thermal resistance for source-down silicon versus GaN.
 - Quantify IGBT-to-SiC crossover by UPS duty cycle and electricity price.
 
@@ -92,3 +98,5 @@ See [08_vrm_and_pmic.md](08_vrm_and_pmic.md).
 - ST MDmesh | https://www.st.com/en/power-transistors/mdmesh-mosfets.html | Accessed 2026-06-10
 - Vishay MOSFETs | https://www.vishay.com/en/mosfets/ | Accessed 2026-06-10
 - onsemi IGBTs | https://www.onsemi.com/products/discrete-power-modules/igbts | Accessed 2026-06-10
+- onsemi Q3 2026 results | https://www.onsemi.com/company/newsroom/news-and-insights/onsemi-reports-third-quarter-2026-results | Indexed 2026-11-12
+- onsemi fab divestitures | https://onsemi.gcs-web.com/news-releases/news-release-details/onsemi-advances-fab-right-strategy-agreements-divest-two | Indexed 2026-11-12

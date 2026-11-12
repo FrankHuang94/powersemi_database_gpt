@@ -1,5 +1,5 @@
 # Sustainability and Efficiency
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** PUE, efficiency, carbon, energy, WUE
 
@@ -15,9 +15,18 @@ must use the same load profile and system boundary.
 ## Key Findings / Highlights
 - [CONFIRMED] A 1 percentage-point efficiency gain at 100 MW continuous load saves 8.76 GWh/year.
 - [ESTIMATED] At $0.10/kWh, that energy is worth about $876k/year, not always exactly $1M.
-- [CONFIRMED] Best hyperscaler PUE values approach ~1.1 annually at favorable sites.
+- [CONFIRMED] Best hyperscaler PUE values approach ~1.1 annually at favorable sites; Google
+  reported a 1.09 fleet-wide PUE for 2025 [Source: Google 2026 Environmental Report, 2026-06-30].
 - [ESTIMATED] GaN totem-pole PFC can improve stage efficiency by roughly 0.5-1.5 points versus legacy silicon designs.
 - [CONFIRMED] WUE complements PUE by tracking water use.
+- [CONFIRMED, 2026-06] Google's 2025 electricity use rose 37%, its largest annual increase on
+  record, while operational emissions fell 2% [Source: Google, 2026-06-30].
+- [CONFIRMED, 2026-06] LBNL's 2025 update projects US datacenter electricity of 649 TWh in 2030
+  in its reference case (range 521-843 TWh, about 9.5-15.3% of US electricity) [Source: LBNL/DOE].
+- [CONFIRMED, 2026] The IEA estimates global datacenter demand of ~485 TWh in 2025, rising to
+  ~950 TWh in 2030 [Source: IEA, Key Questions on Energy and AI].
+- [ESTIMATED, VENDOR CLAIM, 2026-09] ABB claims DC distribution can raise end-to-end efficiency
+  by more than 5% and forecasts 25-40% of new datacenter capacity using DC distribution by 2030.
 
 ## Visual Guide
 ```mermaid
@@ -78,6 +87,14 @@ load curves, redundancy, cooling interaction, and architecture-specific measurem
 | Meta | Net-zero value chain | 2030 target framework | Efficient open infrastructure |
 | Amazon | Net-zero carbon | 2040 | Renewable and efficiency investment |
 
+### Energy Demand Benchmarks
+
+| Scope | Metric | Value | Source | Date |
+|---|---|---:|---|---|
+| Google fleet | Annual PUE | 1.09 | Google Environmental Report | 2025 data |
+| US datacenters | 2030 reference-case electricity | 649 TWh (range 521-843) | LBNL/DOE | 2025 update |
+| Global datacenters | Electricity demand | ~485 TWh (2025) to ~950 TWh (2030) | IEA | 2026 publication |
+
 ### ROI Calculation
 
 100 MW x 1% x 8,760 h = 8.76 GWh. At $0.10/kWh, annual gross energy savings are $876,000.
@@ -94,6 +111,8 @@ Related: [Master Index](README.md).
 | Value at $0.10/kWh | $876,000/year | Calculation | 2026 |
 | Google CFE target | 24/7 by 2030 | Google | current |
 | Amazon net-zero target | 2040 | Amazon | current |
+| Google 2025 fleet PUE | 1.09 | Google | 2026-06-30 |
+| LBNL 2030 US DC reference | 649 TWh | LBNL | 2025 update |
 
 ## Open Questions / Gaps
 - Replace illustrative loss model with measured partial-load efficiency curves.
@@ -107,3 +126,7 @@ Related: [Master Index](README.md).
 - Microsoft sustainability | https://www.microsoft.com/en-us/corporate-responsibility/sustainability | Accessed 2026-06-10
 - Meta sustainability | https://sustainability.atmeta.com/ | Accessed 2026-06-10
 - Amazon sustainability | https://sustainability.aboutamazon.com/ | Accessed 2026-06-10
+- Google 2026 Environmental Report | https://sustainability.google/files/google-2026-environmental-report.pdf | Indexed 2026-11-12
+- LBNL US Data Center Energy Usage Report 2025 | https://eta-publications.lbl.gov/publications/united-states-data-center-energy-2025 | Indexed 2026-11-12
+- IEA Key Questions on Energy and AI | https://iea.blob.core.windows.net/assets/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf | Indexed 2026-11-12
+- ABB Infinitus DC portfolio | https://www.globenewswire.com/news-release/2026/09/21/3365178/0/en/abb-s-new-direct-current-portfolio-aims-to-rewire-ai-data-center-energy-infrastructure.html | Indexed 2026-11-12

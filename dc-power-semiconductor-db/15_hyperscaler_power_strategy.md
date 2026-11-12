@@ -1,5 +1,5 @@
 # Hyperscaler Power Strategy
-> **Last Updated:** 2026-07-28
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** hyperscalers, NVIDIA, Google, Meta, Microsoft, AWS
 
@@ -23,6 +23,19 @@ shelves, and facility equipment from merchant suppliers.
   and published an 800 VDC migration path for MW-scale IT racks beginning with Kyber in 2027.
 - [CONFIRMED] NVIDIA publicly lists ecosystem participants for 800 VDC, but a logo/listing is
   not evidence of revenue, shipment volume, or an exclusive design win.
+- [CONFIRMED, 2026-10-08] Microsoft, Meta, and Google co-authored OCP Mt. Diablo v1.0.0, a
+  ±400 VDC sidecar power rack for 100 kW-1 MW IT racks; Google had committed to ±400 VDC at OCP
+  EMEA 2025.
+- [CONFIRMED, 2026] Google, Microsoft, and NVIDIA lead an OCP workstream for MV AC-to-800 VDC SSTs
+  (spec v0.3); Microsoft is developing and validating SSTs with integrated storage for 800 VDC.
+- [CONFIRMED, 2026-10] Google, Meta, Microsoft, and NVIDIA published an OCP Grid Resilience
+  Specification targeting ride-through and recovery to near-full load within about 2 s.
+- [CONFIRMED, 2026] Vera Rubin entered full production (2026-05-31), NVL72 racks began shipping
+  through OEMs (2026-09), NVIDIA contributed Vera Rubin rack/tray designs to OCP (2026-10-12), and
+  introduced the containerized DSX POD reference design (availability early 2027).
+- [CONFIRMED, 2026-11-02] onsemi reported volume shipments of SiC and silicon MOSFETs into
+  multiple AI platforms including Google (PSUs and 54 V-to-12 V conversion), a rare named public
+  hyperscaler supply disclosure.
 
 ## Visual Guide
 ```mermaid
@@ -59,11 +72,11 @@ flowchart TB
 
 | Organization | Architecture | Voltage target | Public suppliers | Custom silicon evidence | Programs |
 |---|---|---|---|---|---|
-| Google | 48 V, STC research | 48 V | Murata research collaboration | [TO VERIFY custom VRM ASIC] | TPU, fleet optimization |
-| Meta | ORv3 rack/shelf/BBU | 48 V | OCP ecosystem | Shelf/system design confirmed | Open Rack |
-| Microsoft | OCP/HVDC research | 48/400 V concepts | Eaton/OCP ecosystem [verify SKU] | Maia power details limited | Maia/Azure |
+| Google | 48 V, STC research; ±400 VDC Mt. Diablo; MV-to-800 VDC SST workstream | 48 V today; ±400 VDC / 800 VDC | Murata research collaboration; onsemi MOSFET shipments | [TO VERIFY custom VRM ASIC] | TPU, fleet optimization |
+| Meta | ORv3 rack/shelf/BBU; Mt. Diablo co-author | 48 V; ±400 VDC sidecar | OCP ecosystem | Shelf/system design confirmed | Open Rack |
+| Microsoft | Mt. Diablo v0.7/v1.0 contributor; SST + storage to 800 VDC | ±400 VDC / 800 VDC | Eaton/OCP ecosystem [verify SKU] | Maia power details limited | Maia/Azure |
 | AWS | custom server/accelerator | undisclosed | undisclosed | [RUMORED] | Trainium, Inferentia, Graviton |
-| NVIDIA | rack-scale GPU and AI-factory reference architecture | 54 V today; 800 VDC roadmap | Public 800 VDC ecosystem list | Platform specifications | GB200/GB300; Vera Rubin/Kyber |
+| NVIDIA | rack-scale GPU and AI-factory reference architecture | 54 V in rack; 800 VDC sidecar 2H 2026, row power centers 2027 | Public 800 VDC ecosystem list (>80 manufacturers) | Platform specifications; MGX/Vera Rubin designs contributed to OCP | GB200/GB300; Vera Rubin (shipping); Kyber; DSX POD |
 | AMD | OAM/rack platforms | 12/48 V ecosystem | OEM ecosystem | Platform specifications | Instinct |
 | Intel | server/accelerator | 12/48 V ecosystem | VRM ecosystem | VR specifications | Xeon/Gaudi |
 | Alibaba/Baidu/ByteDance | China cloud/AI | 48 V/domestic trend | [TO VERIFY] | [TO VERIFY] | Domestic substitution |
@@ -77,6 +90,9 @@ flowchart TB
 | Google custom VRM ASIC | [TO VERIFY] | Need primary publication/patent-to-product link |
 | Microsoft Maia custom power delivery | [PARTIALLY CONFIRMED] | Platform public; circuit suppliers private |
 | AWS custom PMIC | [RUMORED] | Insufficient primary disclosure |
+| Google/Meta/Microsoft ±400 VDC | [CONFIRMED] | Co-authored OCP Mt. Diablo v1.0.0 |
+| Microsoft SST + storage to 800 VDC | [CONFIRMED, development] | Azure infrastructure blog, 2026-10 |
+| onsemi supply to Google platforms | [CONFIRMED, supplier disclosure] | onsemi Q3 2026 results |
 
 ### Supplier Implications
 
@@ -96,12 +112,18 @@ Related: [Master Index](README.md).
 | Meta HPR public target | 92 kW+ ecosystem | OCP | 2024 |
 | NVIDIA 800 VDC target | 1 MW IT racks and beyond, starting 2027 | NVIDIA | 2026 roadmap |
 | Google 24/7 CFE target | 2030 | Google | 2020/current |
+| Mt. Diablo v1.0.0 authors | Microsoft, Meta, Google | OCP | 2026-10-08 |
+| Vera Rubin NVL72 power shelves | 4 × 110 kW per rack | Supermicro/Cisco | 2026-09 |
+| OCP Grid Resilience recovery target | ~2 s to near-full load | OCP (via NVIDIA) | 2026-10 |
 
 ## Open Questions / Gaps
 - Verify merchant power-semiconductor BOMs through teardowns and supplier disclosures.
 - Separate operator-authored standards from actual fleet deployment percentages.
 - Find primary evidence for custom VRM ASIC claims.
-- Add GB300 and next-generation rack electrical specifications when public.
+- Add GB300 electrical specifications; Vera Rubin NVL72 shelf configuration is now public, but
+  rack-level kW and rail specifications remain unpublished by NVIDIA.
+- Research AWS, Oracle, OpenAI (Stargate), and xAI power architectures (not covered in the
+  2026-11 refresh because of search limits).
 
 ## References
 - Meta/OCP Open Rack | https://www.opencompute.org/wiki/Open_Rack/SpecsAndDesigns | Accessed 2026-06-10
@@ -111,3 +133,11 @@ Related: [Master Index](README.md).
 - AWS Trainium | https://aws.amazon.com/machine-learning/trainium/ | Accessed 2026-06-10
 - NVIDIA 800 VDC architecture | https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/ | Accessed 2026-07-28
 - NVIDIA MGX third-generation rack roadmap | https://www.nvidia.com/en-us/data-center/products/mgx/ | Accessed 2026-07-28
+- Microsoft Azure OCP 2026 blog | https://azure.microsoft.com/en-us/blog/infrastructure-for-the-frontier-era-scaling-intelligence-through-open-industry-collaboration/ | Indexed 2026-11-12
+- Microsoft Azure grid-to-chip power | https://techcommunity.microsoft.com/blog/azureinfrastructureblog/powering-azure-infrastructure-from-grid-to-chip/4563890 | Indexed 2026-11-12
+- Google ±400 VDC at OCP EMEA 2025 | https://cloud.google.com/blog/topics/systems/enabling-1-mw-it-racks-and-liquid-cooling-at-ocp-emea-summit | Indexed 2026-11-12
+- NVIDIA Vera Rubin full production | https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory | Indexed 2026-11-12
+- NVIDIA OCP 2026 blog | https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/ | Indexed 2026-11-12
+- NVIDIA DSX POD | https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment | Indexed 2026-11-12
+- Meta OCP 2026 engineering post | https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/ | Indexed 2026-11-12
+- onsemi Q3 2026 results | https://www.onsemi.com/company/newsroom/news-and-insights/onsemi-reports-third-quarter-2026-results | Indexed 2026-11-12

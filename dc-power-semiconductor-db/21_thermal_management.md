@@ -1,5 +1,5 @@
 # Thermal Management
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** thermal, cooling, TIM, liquid-cooling, simulation
 
@@ -18,6 +18,12 @@ device temperature because die thickness, package, TIM, contact pressure, and co
 - [CONFIRMED] Many commercial Si/GaN devices are rated near 150 C; SiC often 175 C or higher.
 - [ESTIMATED] Air cooling becomes difficult for concentrated ~30 W+ package dissipation without large airflow/heatsinks.
 - [CONFIRMED] Double-sided and direct-substrate cooling reduce package thermal bottlenecks.
+- [CONFIRMED, 2026-10] Liquid cooling is reaching the power path: OCP Global Summit 2026 included
+  a Megmeet/NVIDIA liquid-cooled power-shelf session, Delta showed an 800 VDC liquid-to-liquid
+  CDU (2.5 MW in the OCP release; 3.6 MW in a pre-show release, an unresolved discrepancy), and
+  Supermicro ships Vera Rubin NVL72 racks with 1.8 MW in-row CDUs.
+- [RUMORED, 2026-10] Trade reports describe a liquid-cooled 5,000 A rack busbar and fanless,
+  liquid-cooled compute trays in NVIDIA MGX 1.2; confirm against the specification text.
 
 ## Visual Guide
 ```mermaid
@@ -66,6 +72,7 @@ flowchart TB
 | Direct liquid cold plate | high | Leak/material/service design |
 | Immersion | high | Fluid compatibility and certification |
 | Embedded microfluidics | future/extreme | Manufacturing/reliability challenge |
+| Liquid-cooled power shelf/busbar | 2026 emerging (OCP/MGX ecosystem) | Coolant-adjacent HV insulation, condensation, and serviceability |
 
 ### TIMs
 
@@ -93,10 +100,13 @@ Related: [Master Index](README.md).
 | Common SiC Tj max | 175-200 C class | Datasheets | 2025 |
 | Common GaN Tj max | 150-175 C | Datasheets | 2025 |
 | AI rack cooling trend | Direct liquid expanding | OEM platforms | 2025-2026 |
+| Supermicro Vera Rubin CDU | 1.8 MW in-row, N+1 | Supermicro | 2026-09-23 |
+| Delta 800 VDC L2L CDU | Up to 2.5 MW (OCP release) | Delta | 2026-10-15 |
 
 ## Open Questions / Gaps
 - Add transient thermal impedance curves for representative devices/modules.
-- Collect rack power-shelf liquid-cooling products and field deployments.
+- Collect rack power-shelf liquid-cooling products and field deployments (2026 OCP sessions
+  provide the first product-level candidates).
 - Test immersion-fluid compatibility with encapsulants, TIMs, connectors, and capacitors.
 - Build thermal cost per kW comparison.
 
@@ -104,3 +114,6 @@ Related: [Master Index](README.md).
 - ANSYS Icepak | https://www.ansys.com/products/electronics/ansys-icepak | Accessed 2026-06-10
 - Siemens FloTHERM | https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/flotherm/ | Accessed 2026-06-10
 - 6SigmaET | https://www.6sigmaet.info/ | Accessed 2026-06-10
+- OCP Global Summit 2026 recorded content | https://www.opencompute.org/events/ocp-summit/2026-ocp-global-summit/recorded-content/ | Indexed 2026-11-12
+- Delta OCP 2026 announcements | https://www.prnewswire.com/news-releases/delta-highlights-collaboration-with-nvidia-in-advancing-energy-efficient-800-vdc-power-and-cooling-solutions-for-ai-data-centers-at-ocp-global-summit-2026-302909912.html | Indexed 2026-11-12
+- Supermicro Vera Rubin NVL72 shipping | https://ir.supermicro.com/news/news-details/2026/Supermicro-Now-Shipping-NVIDIA-Vera-Rubin-NVL72-Racks/default.aspx | Indexed 2026-11-12

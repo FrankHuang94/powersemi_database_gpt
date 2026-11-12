@@ -1,5 +1,5 @@
 # Digital Power Management
-> **Last Updated:** 2026-06-30
+> **Last Updated:** 2026-11-12
 > **Status:** Draft
 > **Tags:** PMBus, telemetry, firmware, AVS, security
 
@@ -18,6 +18,15 @@ authentication, rollback, and supply-chain security obligations.
 - [CONFIRMED] AVS/DVFS trade voltage/frequency against performance and energy.
 - [CONFIRMED] Redfish supplies a RESTful management model for server/facility power telemetry.
 - [ESTIMATED] Per-phase telemetry and predictive maintenance become more valuable above 100 kW/rack.
+- [CONFIRMED, 2026-10-12] TI introduced the LMI800PS 800 V isolated hot-swap controller with
+  PMBus and 5 kVrms reinforced isolation (±400 V and 800 V systems; 10 kW EVM), plus a 3 GSPS
+  ADC for nanosecond-scale power-rail telemetry; parts are preproduction [Source: TI, 2026-10-12].
+- [CONFIRMED, 2026] Controller IP is consolidating: Infineon acquired C2i Semiconductors
+  (software-defined multiphase controllers and smart power stages; closed ~2026-10), while
+  onsemi (Ferric), Navitas (Claros), and ADI (Empower) bought integrated-voltage-regulator teams.
+- [CONFIRMED, 2026-10-05] The Microchip/Navitas 800 V-to-6 V reference design pairs a dsPIC33AK
+  digital controller with a TA100 secure element, an example of hardware root-of-trust moving
+  into rack power conversion.
 
 ## Visual Guide
 ```mermaid
@@ -49,6 +58,8 @@ flowchart TB
 | Renesas | ISL/RAA | multiphase, telemetry | PMBus/AVSBus | server VR |
 | Microchip | dsPIC DSC | software-defined control | PMBus/custom | PSU/converter |
 | MPS | MP/MPQ digital | telemetry/integration | PMBus/I2C | server/accelerator |
+| Infineon (C2i, acquired 2026) | software-defined multiphase | firmware-configurable control, smart stages | PMBus | AI accelerator VR |
+| TI | LMI800PS (preproduction) | 800 V isolated hot-swap, telemetry | PMBus | ±400/800 VDC rack protection |
 
 ### Control and Management Stack
 
@@ -92,9 +103,13 @@ Related: [Master Index](README.md).
 - Confirm PCIe VDM power-telemetry adoption and public specifications.
 - Collect disclosed power-controller CVEs and mitigation status.
 - Quantify energy savings from production AVS policies without double-counting DVFS.
+- Define telemetry and protection interfaces for ±400/800 VDC hot-swap and SSCB devices.
 
 ## References
 - PMBus | https://pmbus.org/ | Accessed 2026-06-10
 - DMTF Redfish | https://www.dmtf.org/standards/redfish | Accessed 2026-06-10
 - OCP DC-SCM | https://www.opencompute.org/projects/dc-scm | Accessed 2026-06-10
 - Microchip digital power | https://www.microchip.com/en-us/solutions/power-conversion/digital-power | Accessed 2026-06-10
+- TI LMI800 product page | https://www.ti.com/product/LMI800 | Indexed 2026-11-12
+- Infineon completes C2i acquisition | https://www.infineon.com/press-release/2026/infpr202610-002 | Indexed 2026-11-12
+- Microchip/Navitas 800 VDC reference design | https://www.microchip.com/en-us/about/news-releases/products/the-data-center-is-moving-to-800v-microchip-and-navitas-are-enabling-transition | Indexed 2026-11-12
